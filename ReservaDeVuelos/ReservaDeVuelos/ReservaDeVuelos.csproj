@@ -176,95 +176,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\AEROLINEAS.cs">
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\AEROPUERTOS.cs">
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ASIGNA_AP_AL.cs">
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\AVIONES.cs">
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CONTACTOS_DOCUMENTOS.cs">
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\MODULOS.cs">
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\OPC_VUELOS.cs">
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\OPERACIONES.cs">
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PAISES.cs">
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PAISES_REGIONES.cs">
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PRECIOS_VUELOS.cs">
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PROC_PAGOS_VUELOS.cs">
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\REGIONES.cs">
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\RESERVAS_ASIENTOS.cs">
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\RESERVAS_DESTINOS.cs">
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\RESERVAS_VUELOS.cs">
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ROLES.cs">
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ROL_OPERA.cs">
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sysdiagrams.cs">
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TIPOS_PAGOS.cs">
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TIPO_CONTACTOS.cs">
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TIPO_DOCUMENTOS.cs">
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TIPO_VUELOS.cs">
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\USUARIOS.cs">
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\VUELOS.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>VUELOS.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\VUELOS.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>VUELOS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\VUELOS.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>VUELOS.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -275,25 +188,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\VUELOS.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>VUELOS.edmx</DependentUpon>
-      <LastGenOutput>VUELOS.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\VUELOS.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>VUELOS.edmx</DependentUpon>
-      <LastGenOutput>VUELOS.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\VUELOS.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>VUELOS.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\VUELOS.edmx.diagram">
-      <DependentUpon>VUELOS.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
