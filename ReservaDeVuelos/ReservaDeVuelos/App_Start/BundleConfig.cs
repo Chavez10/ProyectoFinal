@@ -31,12 +31,13 @@ namespace ReservaDeVuelos
 
             //TRABAJAR
             bundles.Add(new ScriptBundle("~/bundles/Bootstrap").Include(
-                ""
+                "~/assets1/js/bootstrap.min.js"
                 ));
 
             //TRABAJAR
             bundles.Add(new ScriptBundle("~/bundles/popper").Include(
-                ""
+                "~/assets1/js/popper.min.js",
+                "~/assets1/js/main.js"
                 ));
 
             //NO TOCAR
