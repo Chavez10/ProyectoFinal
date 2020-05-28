@@ -52,6 +52,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -174,8 +176,95 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AEROLINEAS.cs">
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AEROPUERTOS.cs">
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ASIGNA_AP_AL.cs">
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AVIONES.cs">
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BD_RESERVAS.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_RESERVAS.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BD_RESERVAS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BD_RESERVAS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_RESERVAS.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CONTACTOS_DOCUMENTOS.cs">
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MODULOS.cs">
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OPC_VUELOS.cs">
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OPERACIONES.cs">
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PAISES.cs">
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PAISES_REGIONES.cs">
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PRECIOS_VUELOS.cs">
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PROC_PAGOS_VUELOS.cs">
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\REGIONES.cs">
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RESERVAS_ASIENTOS.cs">
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RESERVAS_DESTINOS.cs">
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RESERVAS_VUELOS.cs">
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ROLES.cs">
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ROL_OPERA.cs">
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TIPOS_PAGOS.cs">
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TIPO_CONTACTOS.cs">
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TIPO_DOCUMENTOS.cs">
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TIPO_VUELOS.cs">
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\USUARIOS.cs">
+      <DependentUpon>BD_RESERVAS.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -186,8 +275,25 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\BD_RESERVAS.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BD_RESERVAS.edmx</DependentUpon>
+      <LastGenOutput>BD_RESERVAS.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\BD_RESERVAS.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BD_RESERVAS.edmx</DependentUpon>
+      <LastGenOutput>BD_RESERVAS.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\BD_RESERVAS.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BD_RESERVAS.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\BD_RESERVAS.edmx.diagram">
+      <DependentUpon>BD_RESERVAS.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -246,6 +352,9 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
