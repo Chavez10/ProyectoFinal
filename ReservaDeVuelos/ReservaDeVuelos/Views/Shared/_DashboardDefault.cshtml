@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>@ViewBag.Title</title>
+        @Styles.Render("~/assets1/css")
+        @Styles.Render("~/assets1/fonts")
+        @Styles.Render("~/assets1/img")
+        @Styles.Render("~/assets1/scss")
+    </head>
+    <body>
+        @RenderBody()
+
+        @RenderSection("script", required: false)
+    </body>
+</html>
