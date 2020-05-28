@@ -47,8 +47,11 @@ namespace ReservaDeVuelos
             //TRABAJAR
             bundles.Add(new StyleBundle("~/assets1/css").Include(
                 "~/assets1/css/animate.css",
-                ""
-                ));
+                "~/assets1/css/aos.css",
+                "~/assets1/css/owl.carousel.min.css",
+                "~/assets1/css/bootstrap.css",
+                "~/assets1/css/bootstrap.css.map",
+                "~/assets1/css/style.css"));
         }
     }
 }
