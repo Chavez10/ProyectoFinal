@@ -15,11 +15,35 @@ namespace ReservaDeVuelos.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Login(string pass)
+        public ActionResult Login(string User, string pass)
         {
-            BD_RESERVAS_VUELOSEntities1 data = new BD_RESERVAS_VUELOSEntities1();
+            try
+            {
+                using (Models.BD_RESERVAS_VUELOSEntities1 db = new BD_RESERVAS_VUELOSEntities1())
+                {
+                    var USUARIOS = (from datos in db.USUARIOS
+                                    where datos.EMAIL == User.Trim() &&
+                                    datos.PASSWORD == pass.Trim()
+                                    select datos).FirstOrDefault();
+                    if (USUARIOS == null)
+                    {
+                        ViewBag.Error = "El Usuario No existe";
+                        return View();
+                    }
+                    else
+                    {
+                        Session["User"] = USUARIOS;
+                    }
+                }
+                return RedirectToAction("Dashboard", "Home");
+            }
+            catch
+            {
+                return View();
+            }
            
-            return View();
+           
+            
         }
     }
 }
