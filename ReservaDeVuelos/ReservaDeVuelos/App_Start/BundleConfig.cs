@@ -25,8 +25,8 @@ namespace ReservaDeVuelos
                       "~/Scripts/respond.js"));
             //TRABAJAR
             bundles.Add(new ScriptBundle("~/bundles/jsQuery").Include(
-                "~/assets1/js/jquery-{version}.min.js",
-                ""
+                "~/assets1/js/jquery-{version}.min.js", "~/assets1/js/aos.js",
+                "~/assets1/js/jquery.waypoint.min.js","~/assets1/js/owl.carousel.min.js"
                 ));
 
             //TRABAJAR
