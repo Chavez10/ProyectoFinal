@@ -270,6 +270,40 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets1\css\animate.css" />
+    <Content Include="assets1\css\aos.css" />
+    <Content Include="assets1\css\bootstrap.css" />
+    <Content Include="assets1\css\owl.carousel.min.css" />
+    <Content Include="assets1\css\style.css" />
+    <Content Include="assets1\img\hero_1.jpg" />
+    <Content Include="assets1\img\hero_2.jpg" />
+    <Content Include="assets1\img\img_1.jpg" />
+    <Content Include="assets1\img\img_2.jpg" />
+    <Content Include="assets1\img\img_3.jpg" />
+    <Content Include="assets1\img\img_4.jpg" />
+    <Content Include="assets1\img\img_5.jpg" />
+    <Content Include="assets1\img\person_1.jpg" />
+    <Content Include="assets1\img\person_2.jpg" />
+    <Content Include="assets1\img\person_3.jpg" />
+    <Content Include="assets1\img\round.png" />
+    <Content Include="assets1\img\slider-1.jpg" />
+    <Content Include="assets1\img\slider-2.jpg" />
+    <Content Include="assets1\img\slider-3.jpg" />
+    <Content Include="assets1\img\slider-4.jpg" />
+    <Content Include="assets1\img\slider-5.jpg" />
+    <Content Include="assets1\img\slider-6.jpg" />
+    <Content Include="assets1\js\aos.js" />
+    <Content Include="assets1\js\bootstrap.min.js" />
+    <Content Include="assets1\js\jquery-3.2.1.min.js" />
+    <Content Include="assets1\js\jquery.waypoints.min.js" />
+    <Content Include="assets1\js\main.js" />
+    <Content Include="assets1\js\owl.carousel.min.js" />
+    <Content Include="assets1\js\popper.min.js" />
+    <Content Include="assets1\plantillas\about.html" />
+    <Content Include="assets1\plantillas\blog.html" />
+    <Content Include="assets1\plantillas\contact.html" />
+    <Content Include="assets1\plantillas\hotel.html" />
+    <Content Include="assets1\plantillas\index.html" />
     <Content Include="assets\css\registro.css" />
     <Content Include="assets\css\style.css" />
     <Content Include="assets\img\758671.png" />
@@ -315,6 +349,49 @@
     <Content Include="Models\RESERVAS.edmx.diagram">
       <DependentUpon>RESERVAS.edmx</DependentUpon>
     </Content>
+    <Content Include="assets1\css\bootstrap.css.map" />
+    <Content Include="assets1\fonts\.DS_Store" />
+    <Content Include="assets1\img\.DS_Store" />
+    <Content Include="assets1\scss\bootstrap-grid.scss" />
+    <Content Include="assets1\scss\bootstrap-reboot.scss" />
+    <Content Include="assets1\scss\bootstrap.scss" />
+    <Content Include="assets1\scss\style.scss" />
+    <Content Include="assets1\scss\_alert.scss" />
+    <Content Include="assets1\scss\_badge.scss" />
+    <Content Include="assets1\scss\_breadcrumb.scss" />
+    <Content Include="assets1\scss\_button-group.scss" />
+    <Content Include="assets1\scss\_buttons.scss" />
+    <Content Include="assets1\scss\_card.scss" />
+    <Content Include="assets1\scss\_carousel.scss" />
+    <Content Include="assets1\scss\_close.scss" />
+    <Content Include="assets1\scss\_code.scss" />
+    <Content Include="assets1\scss\_custom-forms.scss" />
+    <Content Include="assets1\scss\_custom.scss" />
+    <Content Include="assets1\scss\_dropdown.scss" />
+    <Content Include="assets1\scss\_forms.scss" />
+    <Content Include="assets1\scss\_functions.scss" />
+    <Content Include="assets1\scss\_grid.scss" />
+    <Content Include="assets1\scss\_images.scss" />
+    <Content Include="assets1\scss\_input-group.scss" />
+    <Content Include="assets1\scss\_jumbotron.scss" />
+    <Content Include="assets1\scss\_list-group.scss" />
+    <Content Include="assets1\scss\_media.scss" />
+    <Content Include="assets1\scss\_mixins.scss" />
+    <Content Include="assets1\scss\_modal.scss" />
+    <Content Include="assets1\scss\_nav.scss" />
+    <Content Include="assets1\scss\_navbar.scss" />
+    <Content Include="assets1\scss\_pagination.scss" />
+    <Content Include="assets1\scss\_popover.scss" />
+    <Content Include="assets1\scss\_print.scss" />
+    <Content Include="assets1\scss\_progress.scss" />
+    <Content Include="assets1\scss\_reboot.scss" />
+    <Content Include="assets1\scss\_root.scss" />
+    <Content Include="assets1\scss\_tables.scss" />
+    <Content Include="assets1\scss\_tooltip.scss" />
+    <Content Include="assets1\scss\_transitions.scss" />
+    <Content Include="assets1\scss\_type.scss" />
+    <Content Include="assets1\scss\_utilities.scss" />
+    <Content Include="assets1\scss\_variables.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -367,6 +444,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="assets1\fonts\fontawesome\" />
+    <Folder Include="assets1\fonts\ionicons\" />
+    <Folder Include="assets1\scss\mixins\" />
+    <Folder Include="assets1\scss\utilities\" />
     <Folder Include="Filters\" />
     <Folder Include="Views\Accesoontroller\" />
   </ItemGroup>
