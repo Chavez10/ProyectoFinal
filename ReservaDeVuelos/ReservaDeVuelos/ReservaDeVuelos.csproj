@@ -171,14 +171,110 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccesoController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AEROLINEASController.cs" />
+    <Compile Include="Controllers\AEROLINEA_AEROPUERTOController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PAISESController.cs" />
+    <Compile Include="Controllers\PAIS_AEROLINEAController.cs" />
+    <Compile Include="Controllers\REGIONESController.cs" />
+    <Compile Include="Controllers\REGION_AEROPUERTOController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AEROLINEAS.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AEROLINEA_AEROPUERTO.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AEROPUERTOS.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AVIONES.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CONTACTOS_DOCUMENTOS.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MODULOS.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OPC_VUELOS.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OPERACIONES.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PAISES.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PAIS_AEROLINEA.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PRECIOS_VUELOS.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PROC_PAGOS_VUELOS.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\REGIONES.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\REGION_AEROPUERTO.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RESERVAS_ASIENTOS.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RESERVAS_DESTINOS.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RESERVAS_VUELOS.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ROLES.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ROL_OPERA.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TIPOS_PAGOS.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TIPO_CONTACTOS.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TIPO_DOCUMENTOS.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TIPO_VUELOS.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\USUARIOS.cs">
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VueloReservas.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VueloReservas.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VueloReservas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VueloReservas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VueloReservas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VueloReservas.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -243,6 +339,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\VueloReservas.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VueloReservas.edmx</DependentUpon>
+      <LastGenOutput>VueloReservas.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\VueloReservas.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VueloReservas.edmx</DependentUpon>
+      <LastGenOutput>VueloReservas.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="assets1\css\bootstrap.css.map" />
@@ -288,6 +394,13 @@
     <Content Include="assets1\scss\_type.scss" />
     <Content Include="assets1\scss\_utilities.scss" />
     <Content Include="assets1\scss\_variables.scss" />
+    <EntityDeploy Include="Models\VueloReservas.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>VueloReservas.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\VueloReservas.edmx.diagram">
+      <DependentUpon>VueloReservas.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -339,6 +452,36 @@
     <Content Include="Views\Acceso\Login.cshtml" />
     <Content Include="Views\Shared\_DashboardDefault.cshtml" />
     <Content Include="Views\Home\Dashboard.cshtml" />
+    <Content Include="Views\AEROLINEAS\Create.cshtml" />
+    <Content Include="Views\AEROLINEAS\Delete.cshtml" />
+    <Content Include="Views\AEROLINEAS\Details.cshtml" />
+    <Content Include="Views\AEROLINEAS\Edit.cshtml" />
+    <Content Include="Views\AEROLINEAS\Index.cshtml" />
+    <Content Include="Views\PAISES\Create.cshtml" />
+    <Content Include="Views\PAISES\Delete.cshtml" />
+    <Content Include="Views\PAISES\Details.cshtml" />
+    <Content Include="Views\PAISES\Edit.cshtml" />
+    <Content Include="Views\PAISES\Index.cshtml" />
+    <Content Include="Views\REGIONES\Create.cshtml" />
+    <Content Include="Views\REGIONES\Delete.cshtml" />
+    <Content Include="Views\REGIONES\Details.cshtml" />
+    <Content Include="Views\REGIONES\Edit.cshtml" />
+    <Content Include="Views\REGIONES\Index.cshtml" />
+    <Content Include="Views\REGION_AEROPUERTO\Create.cshtml" />
+    <Content Include="Views\REGION_AEROPUERTO\Delete.cshtml" />
+    <Content Include="Views\REGION_AEROPUERTO\Details.cshtml" />
+    <Content Include="Views\REGION_AEROPUERTO\Edit.cshtml" />
+    <Content Include="Views\REGION_AEROPUERTO\Index.cshtml" />
+    <Content Include="Views\PAIS_AEROLINEA\Create.cshtml" />
+    <Content Include="Views\PAIS_AEROLINEA\Delete.cshtml" />
+    <Content Include="Views\PAIS_AEROLINEA\Details.cshtml" />
+    <Content Include="Views\PAIS_AEROLINEA\Edit.cshtml" />
+    <Content Include="Views\PAIS_AEROLINEA\Index.cshtml" />
+    <Content Include="Views\AEROLINEA_AEROPUERTO\Create.cshtml" />
+    <Content Include="Views\AEROLINEA_AEROPUERTO\Delete.cshtml" />
+    <Content Include="Views\AEROLINEA_AEROPUERTO\Details.cshtml" />
+    <Content Include="Views\AEROLINEA_AEROPUERTO\Edit.cshtml" />
+    <Content Include="Views\AEROLINEA_AEROPUERTO\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

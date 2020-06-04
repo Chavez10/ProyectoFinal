@@ -1,0 +1,35 @@
+﻿@model ReservaDeVuelos.Models.AEROLINEA_AEROPUERTO
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AEROLINEA_AEROPUERTO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PAIS_AEROLINEA1.PAIS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PAIS_AEROLINEA1.PAIS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.REGION_AEROPUERTO1.REGION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.REGION_AEROPUERTO1.REGION)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.COD_AL_AP }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
