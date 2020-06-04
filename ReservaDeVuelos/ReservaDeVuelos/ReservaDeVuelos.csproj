@@ -171,8 +171,14 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccesoController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AEROLINEASController.cs" />
+    <Compile Include="Controllers\AEROPUERTOSController.cs" />
+    <Compile Include="Controllers\ASIGNA_AP_ALController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PAISESController.cs" />
+    <Compile Include="Controllers\PAISES_REGIONESController.cs" />
+    <Compile Include="Controllers\REGIONESController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -442,6 +448,37 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Acceso\Login.cshtml" />
     <Content Include="Views\Shared\_DashboardDefault.cshtml" />
+    <Content Include="Views\Home\Dashboard.cshtml" />
+    <Content Include="Views\AEROLINEAS\Create.cshtml" />
+    <Content Include="Views\AEROLINEAS\Delete.cshtml" />
+    <Content Include="Views\AEROLINEAS\Details.cshtml" />
+    <Content Include="Views\AEROLINEAS\Edit.cshtml" />
+    <Content Include="Views\AEROLINEAS\Index.cshtml" />
+    <Content Include="Views\AEROPUERTOS\Create.cshtml" />
+    <Content Include="Views\AEROPUERTOS\Delete.cshtml" />
+    <Content Include="Views\AEROPUERTOS\Details.cshtml" />
+    <Content Include="Views\AEROPUERTOS\Edit.cshtml" />
+    <Content Include="Views\AEROPUERTOS\Index.cshtml" />
+    <Content Include="Views\PAISES\Create.cshtml" />
+    <Content Include="Views\PAISES\Delete.cshtml" />
+    <Content Include="Views\PAISES\Details.cshtml" />
+    <Content Include="Views\PAISES\Edit.cshtml" />
+    <Content Include="Views\PAISES\Index.cshtml" />
+    <Content Include="Views\REGIONES\Create.cshtml" />
+    <Content Include="Views\REGIONES\Delete.cshtml" />
+    <Content Include="Views\REGIONES\Details.cshtml" />
+    <Content Include="Views\REGIONES\Edit.cshtml" />
+    <Content Include="Views\REGIONES\Index.cshtml" />
+    <Content Include="Views\PAISES_REGIONES\Create.cshtml" />
+    <Content Include="Views\PAISES_REGIONES\Delete.cshtml" />
+    <Content Include="Views\PAISES_REGIONES\Details.cshtml" />
+    <Content Include="Views\PAISES_REGIONES\Edit.cshtml" />
+    <Content Include="Views\PAISES_REGIONES\Index.cshtml" />
+    <Content Include="Views\ASIGNA_AP_AL\Create.cshtml" />
+    <Content Include="Views\ASIGNA_AP_AL\Delete.cshtml" />
+    <Content Include="Views\ASIGNA_AP_AL\Details.cshtml" />
+    <Content Include="Views\ASIGNA_AP_AL\Edit.cshtml" />
+    <Content Include="Views\ASIGNA_AP_AL\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

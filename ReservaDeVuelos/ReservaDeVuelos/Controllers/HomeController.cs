@@ -26,5 +26,12 @@ namespace ReservaDeVuelos.Controllers
 
             return View();
         }
+
+        /* --- METODOS HA TRABAJAR DESDE AQUÍ --- */
+
+        public ActionResult Dashboard()
+        {
+            return View();
+        }
     }
 }
