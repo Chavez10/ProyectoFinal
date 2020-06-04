@@ -177,95 +177,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\AEROLINEAS.cs">
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\AEROPUERTOS.cs">
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ASIGNA_AP_AL.cs">
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\AVIONES.cs">
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CONTACTOS_DOCUMENTOS.cs">
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\MODULOS.cs">
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\OPC_VUELOS.cs">
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\OPERACIONES.cs">
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PAISES.cs">
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PAISES_REGIONES.cs">
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PRECIOS_VUELOS.cs">
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PROC_PAGOS_VUELOS.cs">
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\REGIONES.cs">
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\RESERVAS.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RESERVAS.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\RESERVAS.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\RESERVAS.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RESERVAS.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\RESERVAS_ASIENTOS.cs">
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\RESERVAS_DESTINOS.cs">
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\RESERVAS_VUELOS.cs">
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ROLES.cs">
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ROL_OPERA.cs">
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sysdiagrams.cs">
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TIPOS_PAGOS.cs">
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TIPO_CONTACTOS.cs">
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TIPO_DOCUMENTOS.cs">
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TIPO_VUELOS.cs">
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\USUARIOS.cs">
-      <DependentUpon>RESERVAS.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -330,25 +243,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\RESERVAS.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>RESERVAS.edmx</DependentUpon>
-      <LastGenOutput>RESERVAS.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\RESERVAS.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>RESERVAS.edmx</DependentUpon>
-      <LastGenOutput>RESERVAS.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\RESERVAS.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>RESERVAS.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\RESERVAS.edmx.diagram">
-      <DependentUpon>RESERVAS.edmx</DependentUpon>
-    </Content>
     <Content Include="assets1\css\bootstrap.css.map" />
     <Content Include="assets1\fonts\.DS_Store" />
     <Content Include="assets1\img\.DS_Store" />
