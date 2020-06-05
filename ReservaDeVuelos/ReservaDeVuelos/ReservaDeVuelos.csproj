@@ -264,6 +264,7 @@
     <Compile Include="Models\USUARIOS.cs">
       <DependentUpon>VueloReservas.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\VistaUsuariosModel\InfoUser.cs" />
     <Compile Include="Models\VueloReservas.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
