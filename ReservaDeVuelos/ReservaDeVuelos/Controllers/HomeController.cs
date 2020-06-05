@@ -14,14 +14,14 @@ namespace ReservaDeVuelos.Controllers
         {
             return View();
         }
-        [Autorizaciones(CodOperacion: 1)]
+        [Autorizaciones(CodOperacion: 2)]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
 
             return View();
         }
-        [Autorizaciones(CodOperacion: 1)]
+        [Autorizaciones(CodOperacion: 3)]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
@@ -30,7 +30,7 @@ namespace ReservaDeVuelos.Controllers
         }
 
         /* --- METODOS HA TRABAJAR DESDE AQUÍ --- */
-        [Autorizaciones (CodOperacion: 2)]
+        [Autorizaciones (CodOperacion: 5)]
         public ActionResult Dashboard()
         {
             return View();

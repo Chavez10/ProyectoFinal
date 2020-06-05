@@ -37,7 +37,7 @@ namespace ReservaDeVuelos.Filters
                     int? codigoModulo = operas.COD_MOD;
                     OPeracionNombre = getNombOperacion(Operar);
                     Modulo = getNomModulos(codigoModulo);
-                    filterContext.Result = new RedirectResult("~/Error/OperacionNoAutorizada?operacion="
+                    filterContext.Result = new RedirectResult("~/Error/OpercionNoAutorizada?operacion="
                         + OPeracionNombre + ", modulo=" + Modulo + ", error=No_se_Aotoriza");
 
                 }
