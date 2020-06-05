@@ -34,7 +34,12 @@ namespace ReservaDeVuelos.Controllers
                     {
                         Session["User"] = USUARIOS;
                     }
+                    if(USUARIOS.ROL == 1)
+                    {
+                        return RedirectToAction("Index", "Home");
+                    }
                 }
+                
                 return RedirectToAction("Dashboard", "Home");
             }
             catch
