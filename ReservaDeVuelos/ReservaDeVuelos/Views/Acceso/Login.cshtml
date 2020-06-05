@@ -42,26 +42,16 @@
         <img class="avatar" src="img/icono4.jpg" alt="">
         <h1>Login</h1>
 
-        <form action="@Url.Content("~/Accesso/Login")" method="post">
+        <form action="@Url.Content("~/Acceso/Login")" method="post">
             <!--Username-->
             <label for="Username" class="animate__animated animate__fadeInBottomRight"> Nombre de Usuario</label><br>
-            <input type="text" class="animate__animated animate__fadeInBottomLeft" placeholder="Usuario" required>
+            <input type="text" name="User" class="animate__animated animate__fadeInBottomLeft" placeholder="Usuario" required>
 
             <!-- Password-->
             <label for="Password" class="animate__animated animate__fadeInBottomRight"> Contraseña</label><br>
-            <input type="password" class="animate__animated animate__fadeInBottomLeft" placeholder="Contraseña"
+            <input type="password" name="pass" class="animate__animated animate__fadeInBottomLeft" placeholder="Contraseña"
                    required>
-
-            <!--   <label class="container"> Verificacion</label>
-                <input type="checkbox" class="check"> -->
-
-
-
-
-
             <input type="submit" value="Entrar">
-
-            <!--<a href="#"> Olvido su Contraseña?</a><br>-->
             <hr>
             <a href="Registro.html"> No tiene cuenta?</a>
         </form>
