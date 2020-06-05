@@ -173,6 +173,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AEROLINEASController.cs" />
     <Compile Include="Controllers\AEROLINEA_AEROPUERTOController.cs" />
+    <Compile Include="Controllers\AEROPUERTOSController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PAISESController.cs" />
@@ -482,6 +483,11 @@
     <Content Include="Views\AEROLINEA_AEROPUERTO\Details.cshtml" />
     <Content Include="Views\AEROLINEA_AEROPUERTO\Edit.cshtml" />
     <Content Include="Views\AEROLINEA_AEROPUERTO\Index.cshtml" />
+    <Content Include="Views\AEROPUERTOS\Create.cshtml" />
+    <Content Include="Views\AEROPUERTOS\Delete.cshtml" />
+    <Content Include="Views\AEROPUERTOS\Details.cshtml" />
+    <Content Include="Views\AEROPUERTOS\Edit.cshtml" />
+    <Content Include="Views\AEROPUERTOS\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
