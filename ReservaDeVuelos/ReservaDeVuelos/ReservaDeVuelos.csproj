@@ -173,13 +173,16 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AEROLINEASController.cs" />
     <Compile Include="Controllers\AEROLINEA_AEROPUERTOController.cs" />
-    <Compile Include="Controllers\AEROPUERTOSController.cs" />
+    <Compile Include="Controllers\CerrarSesionController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PAISESController.cs" />
     <Compile Include="Controllers\PAIS_AEROLINEAController.cs" />
     <Compile Include="Controllers\REGIONESController.cs" />
     <Compile Include="Controllers\REGION_AEROPUERTOController.cs" />
+    <Compile Include="Filters\Autorizaciones.cs" />
+    <Compile Include="Filters\ValidarSesiones.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -483,11 +486,7 @@
     <Content Include="Views\AEROLINEA_AEROPUERTO\Details.cshtml" />
     <Content Include="Views\AEROLINEA_AEROPUERTO\Edit.cshtml" />
     <Content Include="Views\AEROLINEA_AEROPUERTO\Index.cshtml" />
-    <Content Include="Views\AEROPUERTOS\Create.cshtml" />
-    <Content Include="Views\AEROPUERTOS\Delete.cshtml" />
-    <Content Include="Views\AEROPUERTOS\Details.cshtml" />
-    <Content Include="Views\AEROPUERTOS\Edit.cshtml" />
-    <Content Include="Views\AEROPUERTOS\Index.cshtml" />
+    <Content Include="Views\Error\OpercionNoAutorizada.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -495,8 +494,8 @@
     <Folder Include="assets1\fonts\ionicons\" />
     <Folder Include="assets1\scss\mixins\" />
     <Folder Include="assets1\scss\utilities\" />
-    <Folder Include="Filters\" />
     <Folder Include="Views\Accesoontroller\" />
+    <Folder Include="Views\CerrarSesion\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
