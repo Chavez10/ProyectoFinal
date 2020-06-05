@@ -42,7 +42,7 @@
         <img class="avatar" src="img/icono4.jpg" alt="">
         <h1>Login</h1>
 
-        <form action="" method="">
+        <form action="@Url.Content("~/Accesso/Login")" method="post">
             <!--Username-->
             <label for="Username" class="animate__animated animate__fadeInBottomRight"> Nombre de Usuario</label><br>
             <input type="text" class="animate__animated animate__fadeInBottomLeft" placeholder="Usuario" required>
@@ -61,11 +61,11 @@
 
             <input type="submit" value="Entrar">
 
-            <a href="#"> Olvido su Contraseña?</a><br>
+            <!--<a href="#"> Olvido su Contraseña?</a><br>-->
             <hr>
             <a href="Registro.html"> No tiene cuenta?</a>
         </form>
-
+        <p>@ViewBag.Error</p>
     </div>
 
 </body>
