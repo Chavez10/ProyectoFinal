@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+     
+        <div class="row">
+            <div class="col-lg-12">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>COD_USER</th>
+                        <th>NOM_USER</th>
+                        <th>MAIL_USER</th>
+                        <th>COD_ROL</th>
+                        <th>COD_ESTADO</th>
+                    </tr>
+                    @foreach (var valores in Model)
+                    {
+                        <tr>
+                            <td>@valores.COD_USER</td>
+                            <td>@valores.NOM_USER</td>
+                            <td>@valores.MAIL_USER</td>
+                            <td>@valores.COD_ROL</td>
+                            <td>@valores.COD_ESTADO</td>
+                        </tr>
+                    }
+                </table>
+
+            </div>
+
+        </div>
+</body>
+</html>

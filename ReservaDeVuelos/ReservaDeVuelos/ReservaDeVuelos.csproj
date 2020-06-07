@@ -181,6 +181,7 @@
     <Compile Include="Controllers\PAIS_AEROLINEAController.cs" />
     <Compile Include="Controllers\REGIONESController.cs" />
     <Compile Include="Controllers\REGION_AEROPUERTOController.cs" />
+    <Compile Include="Controllers\USUARIOSController.cs" />
     <Compile Include="Filters\Autorizaciones.cs" />
     <Compile Include="Filters\ValidarSesiones.cs" />
     <Compile Include="Global.asax.cs">
@@ -488,6 +489,7 @@
     <Content Include="Views\AEROLINEA_AEROPUERTO\Edit.cshtml" />
     <Content Include="Views\AEROLINEA_AEROPUERTO\Index.cshtml" />
     <Content Include="Views\Error\OpercionNoAutorizada.cshtml" />
+    <Content Include="Views\Usuarios\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
