@@ -19,7 +19,7 @@ namespace ReservaDeVuelos.Controllers
         {
             try
             {
-                using (Models.BD_RESERVAS_VUELOSEntities2 db = new BD_RESERVAS_VUELOSEntities2())
+                using (Models.bdVuelosEntities db = new bdVuelosEntities())
                 {
                     var USUARIOS = (from datos in db.USUARIOS
                                     where datos.EMAIL == User.Trim() &&

@@ -13,7 +13,7 @@ namespace ReservaDeVuelos.Filters
         string OPeracionNombre = "";
         string Modulo = "";
         private USUARIOS user;
-        private BD_RESERVAS_VUELOSEntities2 data = new BD_RESERVAS_VUELOSEntities2();
+        private bdVuelosEntities data = new bdVuelosEntities();
         private int Operar;
 
         public Autorizaciones(int CodOperacion = 0)

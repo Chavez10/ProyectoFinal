@@ -14,7 +14,7 @@ namespace ReservaDeVuelos.Controllers
         public ActionResult Index()
         {
             List<InfoUser> lista = null;
-            using(BD_RESERVAS_VUELOSEntities2 data = new BD_RESERVAS_VUELOSEntities2())
+            using(bdVuelosEntities data = new bdVuelosEntities())
             {
                 lista = (from info in data.USUARIOS
                          where info.ESTADO == true

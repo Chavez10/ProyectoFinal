@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7f468a5145dd45ea898d271e8cfbc3e7" Name="Diagram1">
+        <EntityTypeShape EntityType="bdVuelosModel.AEROLINEA_AEROPUERTO" Width="1.5" PointX="19.5" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdVuelosModel.AEROLINEAS" Width="1.5" PointX="6" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdVuelosModel.AEROPUERTOS" Width="1.5" PointX="15" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdVuelosModel.AVIONES" Width="1.5" PointX="6" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdVuelosModel.CONTACTOS_DOCUMENTOS" Width="1.5" PointX="5.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdVuelosModel.MODULOS" Width="1.5" PointX="1.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdVuelosModel.OPC_VUELOS" Width="1.5" PointX="3" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdVuelosModel.OPERACIONES" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdVuelosModel.PAIS_AEROLINEA" Width="1.5" PointX="15" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdVuelosModel.PAISES" Width="1.5" PointX="12.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdVuelosModel.PRECIOS_VUELOS" Width="1.5" PointX="10.5" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdVuelosModel.PROC_PAGOS_VUELOS" Width="1.5" PointX="12.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdVuelosModel.REGION_AEROPUERTO" Width="1.5" PointX="17.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdVuelosModel.REGIONES" Width="1.5" PointX="15" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdVuelosModel.RESERVAS_ASIENTOS" Width="1.5" PointX="8.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdVuelosModel.RESERVAS_VUELOS" Width="1.5" PointX="10.5" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdVuelosModel.ROL_OPERA" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdVuelosModel.ROLES" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdVuelosModel.TIPO_CONTACTOS" Width="1.5" PointX="3" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdVuelosModel.TIPO_DOCUMENTOS" Width="1.5" PointX="3" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdVuelosModel.TIPO_VUELOS" Width="1.5" PointX="6" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdVuelosModel.TIPOS_PAGOS" Width="1.5" PointX="10.5" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdVuelosModel.USUARIOS" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdVuelosModel.RESERVAS_DESTINOS" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <AssociationConnector Association="bdVuelosModel.FK_AEROLINEA_AEROPUERTO_PAIS_AEROLINEA" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.FK_AEROLINEA_AEROPUERTO_REGION_AEROPUERTO" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.fk_aero_ra" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.fk_aerol_pv" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.fk_aviones_aerolinea" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.FK_PAIS_AEROLINEA_AEROLINEAS" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.fk_apal_aeropuerto" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.fk_avion_ra" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.FK__CONTACTOS__COD_U__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.fk_cd_contacto" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.fk_cd_documento" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.fk_mod_opera" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.fk_opc_rd" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.fk_opera_opera" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.FK_PAIS_AEROLINEA_PAISES" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.FK_REGIONES_PAISES" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.fk_prV_prcPV" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.fk_reserva_prcPV" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.fk_tipP_prcPV" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.FK_REGION_AEROPUERTO_REGIONES" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.FK__RESERVAS___COD_U__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.fk_ra_rv" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.fk_tpv_ra" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.FK__RESERVAS___COD_U__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.fk_rol_opera" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.fk_usuarios_roles" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.FK__RESERVAS___USUAR__5070F446" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
