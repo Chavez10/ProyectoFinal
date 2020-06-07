@@ -176,6 +176,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PAISESController.cs" />
+    <Compile Include="Controllers\REGIONESController.cs" />
     <Compile Include="Controllers\USUARIOSController.cs" />
     <Compile Include="Filters\Autorizaciones.cs" />
     <Compile Include="Filters\ValidarSesiones.cs" />
@@ -457,6 +458,11 @@
     <Content Include="Views\PAISES\Details.cshtml" />
     <Content Include="Views\PAISES\Edit.cshtml" />
     <Content Include="Views\PAISES\Index.cshtml" />
+    <Content Include="Views\REGIONES\Create.cshtml" />
+    <Content Include="Views\REGIONES\Delete.cshtml" />
+    <Content Include="Views\REGIONES\Details.cshtml" />
+    <Content Include="Views\REGIONES\Edit.cshtml" />
+    <Content Include="Views\REGIONES\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

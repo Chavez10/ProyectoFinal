@@ -24,9 +24,9 @@
             @Html.DisplayFor(modelItem => item.PAIS)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.COD_PAIS }) |
-            @Html.ActionLink("Details", "Details", new { id=item.COD_PAIS }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.COD_PAIS })
+            @Html.ActionLink("Edit", "Edit", new { id=item.COD_PAIS.Trim() }) |
+            @Html.ActionLink("Details", "Details", new { id=item.COD_PAIS.Trim() }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.COD_PAIS.Trim() })
         </td>
     </tr>
 }
