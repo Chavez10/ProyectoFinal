@@ -43,7 +43,8 @@ namespace ReservaDeVuelos
             //NO TOCAR
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                       "~/Content/lista.css"));
 
             //TRABAJAR
             bundles.Add(new StyleBundle("~/assets1/css").Include(

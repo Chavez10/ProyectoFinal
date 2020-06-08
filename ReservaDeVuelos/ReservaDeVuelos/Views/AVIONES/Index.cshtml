@@ -1,0 +1,52 @@
+﻿@model IEnumerable<ReservaDeVuelos.Models.AVIONES>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOM_AVION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MOD_AVION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CAP_AVION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AEROLINEAS.NOM_AEROLINEA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOM_AVION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MOD_AVION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CAP_AVION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AEROLINEAS.NOM_AEROLINEA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.COD_AVION }) |
+            @Html.ActionLink("Details", "Details", new { id=item.COD_AVION }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.COD_AVION })
+        </td>
+    </tr>
+}
+
+</table>

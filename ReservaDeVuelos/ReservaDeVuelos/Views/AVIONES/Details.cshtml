@@ -1,0 +1,51 @@
+﻿@model ReservaDeVuelos.Models.AVIONES
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AVIONES</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOM_AVION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOM_AVION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MOD_AVION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MOD_AVION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAP_AVION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAP_AVION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AEROLINEAS.NOM_AEROLINEA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AEROLINEAS.NOM_AEROLINEA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.COD_AVION }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ReservaDeVuelos.Models.REGION_AEROPUERTO>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AEROPUERTOS.NOM_AERO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REGIONES.REGION)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AEROPUERTOS.NOM_AERO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REGIONES.REGION)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.COD_REG_AER }) |
+            @Html.ActionLink("Details", "Details", new { id=item.COD_REG_AER }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.COD_REG_AER })
+        </td>
+    </tr>
+}
+
+</table>
