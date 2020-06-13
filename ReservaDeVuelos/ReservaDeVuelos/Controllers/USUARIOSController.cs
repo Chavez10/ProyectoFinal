@@ -17,14 +17,15 @@ namespace ReservaDeVuelos.Controllers
             using(bdVuelosEntities data = new bdVuelosEntities())
             {
                 lista = (from info in data.USUARIOS
+                         join rol in data.ROLES on info.ROL equals rol.COD_ROL
                          where info.ESTADO == true
-                         orderby info.EMAIL
+                         orderby info.COD_USUARIO ascending
                          select new InfoUser
                          {
                              COD_USER = info.COD_USUARIO,
                              NOM_USER = info.NOMBRES,
                              MAIL_USER = info.EMAIL,
-                             COD_ROL = info.ROL,
+                             COD_ROL = rol.ROL,
                              COD_ESTADO = info.ESTADO
                          }).ToList();
             }
