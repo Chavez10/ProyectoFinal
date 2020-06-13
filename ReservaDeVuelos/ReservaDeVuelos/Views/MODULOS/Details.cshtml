@@ -1,0 +1,27 @@
+﻿@model ReservaDeVuelos.Models.MODULOS
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MODULOS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOM_MOD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOM_MOD)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.COD_MOD }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

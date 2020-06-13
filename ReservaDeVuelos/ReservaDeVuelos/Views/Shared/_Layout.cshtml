@@ -28,9 +28,10 @@
                    
                    
                  
-                   <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Mantenimiento</a>
+                   <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Mantenimiento De Vuelos</a>
                        <div class="dropdown-content">
-                           @Html.ActionLink("Usuarios", "Index", "USUARIOS")
+
+                           
                            @Html.ActionLink("Paises", "Index", "PAISES")
                            @Html.ActionLink("Regiones", "Index", "REGIONES")
                            @Html.ActionLink("Aerolineas", "Index", "AEROLINEAS")
@@ -40,8 +41,39 @@
                            @Html.ActionLink("Aerolienas por Aeropuertos", "Index", "AEROLINEA_AEROPUERTO")
                            @Html.ActionLink("Aviones", "Index", "AVIONES")
                            @Html.ActionLink("Opciones para los vuelos", "Index", "OPC_VUELOS")
+                           @Html.ActionLink("Tipo de contactos", "Index", "TIPO_CONTACTOS")
+                           @Html.ActionLink("Tipo de vuelos", "Index", "TIPOS_VUELOS")
+
                        </div>
                      </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Mantenimiento De Usuarios</a>
+                        <div class="dropdown-content">
+
+                            @Html.ActionLink("Usuarios", "Index", "USUARIOS")
+                            @Html.ActionLink("Roles", "Index", "ROLES")
+                            @Html.ActionLink("Operaciones", "Index", "OPERACIONES")
+                            @Html.ActionLink("Roles por operaciones", "Index", "ROL_OPERA")
+                            @Html.ActionLink("Modulos", "Index", "MODULOS")
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Mantenimiento De Registro</a>
+                        <div class="dropdown-content">
+                            
+                            @Html.ActionLink("Tipo de documentos", "Index", "TIPO_DOCUMENTOS")
+                           
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Registro De Pagos</a>
+                    <div class="dropdown-content">
+                        @Html.ActionLink("Tipos de Pagos", "Index", "TIPOS_PAGOS")
+                        @Html.ActionLink("Precios de Vuelos", "Index", "PRECIOS_VUELOS")
+                    </div>
+                    </li>
+
                     <li style="float:right">@Html.ActionLink("Cerrar Sesión", "CerrarSesion", "CerrarSesion")</li>
                 </ul>
              

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ReservaDeVuelos.Models.ROL_OPERA>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OPERACIONES.NOM_OPERA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ROLES.ROL)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.OPERACIONES.NOM_OPERA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ROLES.ROL)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.COD_ROLOP }) |
+            @Html.ActionLink("Details", "Details", new { id=item.COD_ROLOP }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.COD_ROLOP })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,51 @@
+﻿@model ReservaDeVuelos.Models.PRECIOS_VUELOS
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PRECIOS_VUELOS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ORIGEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ORIGEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DESTINO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DESTINO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TOTAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TOTAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AEROLINEAS.NOM_AEROLINEA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AEROLINEAS.NOM_AEROLINEA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.COD_PRECIO_VUELO }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
