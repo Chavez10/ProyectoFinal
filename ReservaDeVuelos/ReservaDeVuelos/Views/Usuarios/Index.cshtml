@@ -1,41 +1,41 @@
 ﻿
 @{
-    Layout = null;
+    ViewBag.Title = "Usuarios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-     
-        <div class="row">
-            <div class="col-lg-12">
-                <table class="table table-bordered">
+<h2>Listado de los Usuarios</h2>
+<hr />
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>COD_USER</th>
+                    <th>NOM_USER</th>
+                    <th>MAIL_USER</th>
+                    <th>COD_ROL</th>
+                    <th>COD_ESTADO</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            @foreach (var valores in Model)
+            {
+                <tbody>
                     <tr>
-                        <th>COD_USER</th>
-                        <th>NOM_USER</th>
-                        <th>MAIL_USER</th>
-                        <th>COD_ROL</th>
-                        <th>COD_ESTADO</th>
+                        <td>@valores.COD_USER</td>
+                        <td>@valores.NOM_USER</td>
+                        <td>@valores.MAIL_USER</td>
+                        <td>@valores.COD_ROL</td>
+                        <td>@valores.COD_ESTADO</td>
                     </tr>
-                    @foreach (var valores in Model)
-                    {
-                        <tr>
-                            <td>@valores.COD_USER</td>
-                            <td>@valores.NOM_USER</td>
-                            <td>@valores.MAIL_USER</td>
-                            <td>@valores.COD_ROL</td>
-                            <td>@valores.COD_ESTADO</td>
-                        </tr>
-                    }
-                </table>
+                </tbody>
+                
+            }
+        </table>
 
-            </div>
+    </div>
 
-        </div>
-</body>
-</html>
+</div>
+
