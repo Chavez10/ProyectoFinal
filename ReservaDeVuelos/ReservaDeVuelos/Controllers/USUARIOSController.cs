@@ -31,5 +31,13 @@ namespace ReservaDeVuelos.Controllers
             }
             return View(lista);
         }
+
+        [HttpGet]
+
+        public ActionResult Insert()
+        {
+            return View();
+
+        }
     }
 }
