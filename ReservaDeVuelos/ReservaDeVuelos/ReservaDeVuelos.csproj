@@ -260,6 +260,7 @@
     <Compile Include="Models\REGION_AEROPUERTO.cs">
       <DependentUpon>ModelVuelos.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\RegistroUsuarioModel\RegistroUsuarios.cs" />
     <Compile Include="Models\RESERVAS_ASIENTOS.cs">
       <DependentUpon>ModelVuelos.tt</DependentUpon>
     </Compile>
