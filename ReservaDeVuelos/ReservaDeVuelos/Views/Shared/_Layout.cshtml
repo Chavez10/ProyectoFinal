@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    <title>@ViewBag.Title - Reservas de Vuelos</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -25,13 +25,8 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                   
-                   
-                 
                    <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Mantenimiento De Vuelos</a>
                        <div class="dropdown-content">
-
-                           
                            @Html.ActionLink("Paises", "Index", "PAISES")
                            @Html.ActionLink("Regiones", "Index", "REGIONES")
                            @Html.ActionLink("Aerolineas", "Index", "AEROLINEAS")
@@ -43,7 +38,7 @@
                            @Html.ActionLink("Opciones para los vuelos", "Index", "OPC_VUELOS")
                            @Html.ActionLink("Tipo de contactos", "Index", "TIPO_CONTACTOS")
                            @Html.ActionLink("Tipo de vuelos", "Index", "TIPOS_VUELOS")
-
+                           @Html.ActionLink("Precios de Vuelos", "Index", "PRECIOS_VUELOS")
                        </div>
                      </li>
                     <li class="dropdown">
@@ -55,28 +50,12 @@
                             @Html.ActionLink("Operaciones", "Index", "OPERACIONES")
                             @Html.ActionLink("Roles por operaciones", "Index", "ROL_OPERA")
                             @Html.ActionLink("Modulos", "Index", "MODULOS")
-                        </div>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropbtn">Mantenimiento De Registro</a>
-                        <div class="dropdown-content">
-                            
                             @Html.ActionLink("Tipo de documentos", "Index", "TIPO_DOCUMENTOS")
-                           
+                            @Html.ActionLink("Tipos de Pagos", "Index", "TIPOS_PAGOS")
                         </div>
                     </li>
-                    <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Registro De Pagos</a>
-                    <div class="dropdown-content">
-                        @Html.ActionLink("Tipos de Pagos", "Index", "TIPOS_PAGOS")
-                        @Html.ActionLink("Precios de Vuelos", "Index", "PRECIOS_VUELOS")
-                    </div>
-                    </li>
-
                     <li style="float:right">@Html.ActionLink("Cerrar Sesión", "CerrarSesion", "CerrarSesion")</li>
                 </ul>
-             
             </div>
         </div>
     </div>
@@ -84,7 +63,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+            <p>&copy; @DateTime.Now.Year - RESERVAS DE VUELOS</p>
         </footer>
     </div>
 
