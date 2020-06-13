@@ -187,6 +187,7 @@
     <Compile Include="Controllers\PRECIOS_VUELOSController.cs" />
     <Compile Include="Controllers\REGIONESController.cs" />
     <Compile Include="Controllers\REGION_AEROPUERTOController.cs" />
+    <Compile Include="Controllers\RegistrosController.cs" />
     <Compile Include="Controllers\ROLESController.cs" />
     <Compile Include="Controllers\ROL_OPERAController.cs" />
     <Compile Include="Controllers\TIPOS_PAGOSController.cs" />
@@ -260,6 +261,7 @@
     <Compile Include="Models\REGION_AEROPUERTO.cs">
       <DependentUpon>ModelVuelos.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\RegistroUsuarioModel\RegistroUsuarios.cs" />
     <Compile Include="Models\RESERVAS_ASIENTOS.cs">
       <DependentUpon>ModelVuelos.tt</DependentUpon>
     </Compile>
@@ -562,6 +564,7 @@
     <Content Include="Views\PRECIOS_VUELOS\Details.cshtml" />
     <Content Include="Views\PRECIOS_VUELOS\Edit.cshtml" />
     <Content Include="Views\PRECIOS_VUELOS\Index.cshtml" />
+    <Content Include="Views\Registros\Registro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -53,7 +53,7 @@
                    required>
             <input type="submit" value="Entrar">
             <hr>
-            <a href="Registro.html"> No tiene cuenta?</a>
+           <input type="button" onclick="document.location.href='@Url.Content("~/Registros/Registro")'" value="Registrarse" />
         </form>
         <p>@ViewBag.Error</p>
     </div>

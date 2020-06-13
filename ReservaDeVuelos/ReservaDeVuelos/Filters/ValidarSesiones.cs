@@ -16,17 +16,20 @@ namespace ReservaDeVuelos.Filters
             try { 
             base.OnActionExecuted(filterContext);
             usu = (USUARIOS)HttpContext.Current.Session["user"];
+             
             if (usu == null)
             {
                 if (filterContext.Controller is AccesoController == false)
                 {
                     filterContext.HttpContext.Response.Redirect("~/Acceso/Login");
-                }
+                    }
             }
+                
             }
             catch (Exception)
             {
                 filterContext.Result = new RedirectResult("~/Acceso/Login");
+               
             }
         
         }
