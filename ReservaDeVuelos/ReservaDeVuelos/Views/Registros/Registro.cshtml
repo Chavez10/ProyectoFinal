@@ -1,0 +1,114 @@
+﻿
+@{
+ Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/ojo.png" type="image/x-icon">
+    @Styles.Render("~/assets/css")
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    @Scripts.Render("~/bundle/javascript")
+    
+
+    <title>Registro</title>
+</head>
+
+<body id="completo">
+    <header></header>
+    <div class="login-box  Just-add-water animate__bounce ">
+        <form action="" autocomplete="on">
+            <h1> Registrate</h1>
+            <hr>
+            <div class="input1">
+                <label for="usernamesignup" class="animate__animated animate__fadeInBottomRight">Nombres</label>&nbsp; &nbsp;
+                <input id="usernamesignup" class="animate__animated animate__fadeInBottomLeft" name="NOMBRES" required="required" type="text" placeholder="Nombre" />
+            </div>
+            <br>
+            <div class="input2">
+                <label for="emailsignup" class="animate__animated animate__fadeInBottomRight">Apellidos</label>
+
+                <input id="APELLIDO" class="animate__animated animate__fadeInBottomLeft" name="APELLIDOS" required="required" type="text" placeholder="Apellido" />
+
+            </div>
+
+            <div class="input3">
+
+                <label for="residencia" class="animate__animated animate__fadeInBottomRigh">Residencia</label>
+                <input id="residencia" class="animate__animated animate__fadeInBottomLeft" name="Residencia" required="required" type="text" placeholder="Residencia" />
+            </div>
+            <hr>
+
+            <div class="input4">
+                <label for="residencia" class="class=" animate__animated animate__fadeInBottomLeft"">Edad</label>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+                <input id="residencia" class="animate__animated animate__fadeInBottomLeft" name="Residencia" required="required" type="number" placeholder="Edad" />
+            </div>
+            <br>
+            <br>
+
+
+            <div class="input5">
+
+                <select name="GENERO">
+
+                    <option>Genero</option>
+                    <option>Masculino</option>
+
+                    <option>Femenino</option>
+
+                </select>
+                </label>
+            </div>
+            <br><br><br>
+            <hr>
+            <div class="input6">
+                <label for="Usuario" class="usuario">Usuario</label>&nbsp; &nbsp;
+                <input id="USUARIO" class="animate__animated animate__fadeInBottomLeft" name="USUARIO" required="required" type="text" placeholder="Usuario" />
+            </div>
+            <br>
+            <div class="input7">
+                <label for="PASS" class="APLLIDO"> Contraseña</label>&nbsp; &nbsp;
+                <input id="PASSWORD" class="animate__animated animate__fadeInBottomLeft" name="PASSWORD" required="required" type="password" placeholder="Contraseña" />
+                <!--<button class="btn btn-primary" type="button"  onclick="mostrarContrasena()">mostrar Pass</button>
+                -->
+            </div>
+            <br>
+            <div class="input8">
+                <label for="Correo" class="correo">Correo</label>&nbsp; &nbsp; &nbsp;
+                <input id="CORREO" class="animate__animated animate__fadeInBottomLeft" name="CORREO" required="required" type="email" placeholder="Correo" < />
+            </div>
+            <div class="input9">
+                <label for="PASS" class="APLLIDO"> Confirmar</label>&nbsp; &nbsp;
+                <input id="PASSWORD" class="animate__animated animate__fadeInBottomLeft" name="PASSWORD" required="required" type="password" placeholder="Confirmar " />
+                <!--<button class="btn btn-primary" type="button"  onclick="mostrarContrasena()">mostrar Pass</button>
+                -->
+            </div>
+            <br>
+            <hr>
+
+            <div class="center">
+                <input type="submit" value="Registro" />
+
+
+                <br>
+                <p>
+                    Ya eres mienbro registrate
+                    <br><a href="login.html" id="btn1" class="to_register"> Loguéate </a>
+                </p>
+                
+            </div>
+
+        </form>
+    </div>
+
+
+</body>
+
+</html>
+

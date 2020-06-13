@@ -28,6 +28,13 @@ namespace ReservaDeVuelos
                 "~/assets1/js/jquery-{version}.min.js", "~/assets1/js/aos.js",
                 "~/assets1/js/jquery.waypoint.min.js","~/assets1/js/owl.carousel.min.js"
                 ));
+            //Registro de Inicio de session css
+            bundles.Add(new StyleBundle("~/assets/css").Include(
+                "~/assets/css/registro.css",
+                "~/assets/css/style.css"));
+            //Registro de Inicio de session js
+            bundles.Add(new ScriptBundle("~/bundle/javascript").Include(
+                "~/assets/jquery/jquery.min.js", "~/assets/js/registro.css", "~/assets/js/script.js"));
 
             //TRABAJAR
             bundles.Add(new ScriptBundle("~/bundles/Bootstrap").Include(
