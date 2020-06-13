@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using ReservaDeVuelos.Models;
 using ReservaDeVuelos.Models.VistaUsuariosModel;
+using ReservaDeVuelos.Models.CRUD;
 
 namespace ReservaDeVuelos.Controllers
 {
@@ -33,11 +34,12 @@ namespace ReservaDeVuelos.Controllers
         }
 
         [HttpGet]
-
         public ActionResult Insert()
         {
-            return View();
-
+            var data = new bdVuelosEntities();
+            var model = new UserViewCrud();
+            model.COD_ROL = new SelectList(data.ROLES, "COD_ROL", "NOMBRE", 1);
+            return View(model);
         }
     }
 }
