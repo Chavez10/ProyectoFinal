@@ -55,11 +55,14 @@ namespace ReservaDeVuelos.Controllers
                 objUser.ESTADO = modelo.COD_ESTADO;
                 objUser.EMAIL = modelo.MAIL_USER;
                 objUser.APELLIDOS = modelo.APELLIDOS;
+                objUser.DIRECCION = modelo.DIRECCION;
                 objUser.EDAD = modelo.EDADES;
-                
+                objUser.GENERO = modelo.GENERO;
                 objUser.NOMBRES = modelo.NOMB_USER;
+                objUser.USUARIO = modelo.NOM_USU;
                 objUser.ROL = modelo.COD_ROL;
-               
+                objUser.FECHA_CREACION= Convert.ToDateTime( DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
+                objUser.COD_USUARIO = modelo.COD_USER;
                 objUser.PASSWORD = modelo.PASS_USER;
                 data.USUARIOS.Add(objUser);
                 data.SaveChanges();

@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@ViewBag.Title</h2>
+<h2>Insertar Usuario</h2>
 
 <div class="col-md-12">
     @using (Html.BeginForm("Insert", "Usuarios", FormMethod.Post, new { role = "form", @class = "" }))
@@ -33,9 +33,9 @@
             @Html.TextBoxFor(direcUSER => direcUSER.DIRECCION, new { @class = "form-control" })
             <br />
             <br />
-            @Html.LabelFor(edadUSER => edadUSER.EDAD)
+            @Html.LabelFor(edadUSER => edadUSER.EDADES)
             <br />
-            @Html.TextBoxFor(edadUSER => edadUSER.EDAD, new { @class = "form-control" })
+            @Html.TextBoxFor(edadUSER => edadUSER.EDADES, new { @class = "form-control" })
             <br />
             <br />
             @Html.LabelFor(generoUSER => generoUSER.GENERO)
@@ -67,7 +67,7 @@
         <br />
            
             
-          <div style="text-align:right">
+          <div style="text-align:center">
                 <input type="submit" class="btn btn-success" name="btnGuardar" value="Guardar" />
             </div>
 

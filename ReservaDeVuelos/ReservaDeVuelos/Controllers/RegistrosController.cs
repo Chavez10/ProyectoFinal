@@ -7,12 +7,21 @@ using System.Web.Mvc;
 namespace ReservaDeVuelos.Controllers
 {
     public class RegistrosController : Controller
-    {
+    { 
         // GET: Registros
-        public ActionResult Registro()
+       /* public ActionResult Registro()
         {
             
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Registro()
+        {
+            return View(); 
+           
+        }
+        */
+
     }
 }
