@@ -566,6 +566,7 @@
     <Content Include="Views\PRECIOS_VUELOS\Index.cshtml" />
     <Content Include="Views\Registros\Registro.cshtml" />
     <Content Include="Views\Usuarios\Insert.cshtml" />
+    <Content Include="Views\Usuarios\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
