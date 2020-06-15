@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ReservaDeVuelos.Models;
-using ReservaDeVuelos.Models.VistaUsuariosModel;
+using ReservaDeVuelos.Models.VistaRegistrosModel;
 using ReservaDeVuelos.Models.CRUD;
 
 namespace ReservaDeVuelos.Controllers
