@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    <title>@ViewBag.Title - Reservas de Vuelos</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -18,16 +18,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Nombre de aplicación", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Cerrar Sesión", "CerrarSesion", "CerrarSesion")
+                @Html.ActionLink("Reservas de Vuelos", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                  
-                    
-                   
-                  
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -35,9 +31,13 @@
     </div>
     <div class="container body-content">
         @RenderBody()
+        
+    </div>
+
+    <div class="col-md-12">
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+        <footer style="text-align:center;">
+            <p>&copy; @DateTime.Now.Year - RESERVAS DE VUELOS</p>
         </footer>
     </div>
 

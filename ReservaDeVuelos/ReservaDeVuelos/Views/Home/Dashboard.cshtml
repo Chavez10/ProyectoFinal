@@ -10,10 +10,7 @@
     <div class="col-md-2">
         <div class="form-group">
             <label>Origen</label>
-            <select class="form-control">
-                <selected>Escoja su Origen</selected>
-                <option>La Libertad, El Salvador</option>
-            </select>
+            @Html.DropDownList("Origen", ViewBag.Origen as IEnumerable<SelectListItem>)
         </div>
     </div>
     <div class="col-md-2">
@@ -41,6 +38,15 @@
         <div class="form-group">
             <label>Asientos de Reserva</label>
             <input type="number" class="form-control" />
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Su Aerolinea</label>
+            <select class="form-control">
+                <selected>Escoja su Aerolinea</selected>
+                <option>Avianca</option>
+            </select>
         </div>
     </div>
 </div>
