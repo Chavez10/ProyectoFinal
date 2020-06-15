@@ -15,7 +15,7 @@ namespace ReservaDeVuelos.Controllers
         public ActionResult Index()
         {
             List<InfoUser> lista = null;
-            using(bdVuelosEntities1 data = new bdVuelosEntities1())
+            using (bdVuelosEntities1 data = new bdVuelosEntities1())
             {
                 lista = (from info in data.USUARIOS
                          join rol in data.ROLES on info.ROL equals rol.COD_ROL
@@ -61,13 +61,74 @@ namespace ReservaDeVuelos.Controllers
                 objUser.NOMBRES = modelo.NOMB_USER;
                 objUser.USUARIO = modelo.NOM_USU;
                 objUser.ROL = modelo.COD_ROL;
-                objUser.FECHA_CREACION= Convert.ToDateTime( DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
+                objUser.FECHA_CREACION = Convert.ToDateTime(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
                 objUser.COD_USUARIO = modelo.COD_USER;
                 objUser.PASSWORD = modelo.PASS_USER;
                 data.USUARIOS.Add(objUser);
                 data.SaveChanges();
             }
             return Redirect(Url.Content("~/USUARIOS"));
+        }
+        public ActionResult Edit(int id)
+        {
+
+            UserViewEditar modelo = new UserViewEditar();
+
+            bdVuelosEntities1 dat = new bdVuelosEntities1();
+            using (var data = new bdVuelosEntities1())
+            {
+              var actUser = data.USUARIOS.Find(id);
+               modelo.COD_ESTADO =  actUser.ESTADO;                     
+               modelo.MAIL_USER  =  actUser.EMAIL;                      
+               modelo.APELLIDOS  =  actUser.APELLIDOS;                  
+               modelo.DIRECCION  =  actUser.DIRECCION;                  
+               modelo.EDADES     =  actUser.EDAD;                       
+               modelo.GENERO     =  actUser.GENERO;                     
+               modelo.NOMB_USER  =  actUser.NOMBRES;                    
+               modelo.NOM_USU    =  actUser.USUARIO;
+               modelo.COD_ROL    = Convert.ToInt32(actUser.ROL);
+               modelo.COD_USER   = actUser.COD_USUARIO;
+               modelo.PASS_USER  = actUser.PASSWORD;                  
+
+            }
+            modelo.Roles = new SelectList(dat.ROLES, "COD_ROL", "ROL", 1);
+            return View(modelo);
+        }
+        [HttpPost]
+        public ActionResult Edit(UserViewEditar modelo)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(modelo);
+            }
+            using (var data = new bdVuelosEntities1())
+            {
+                var objUser = data.USUARIOS.Find(modelo.COD_USER);
+                objUser.ESTADO = modelo.COD_ESTADO;
+                objUser.NOMBRES = modelo.NOMB_USER;
+                if (modelo.PASS_USER != null && modelo.PASS_USER.Trim() != "")
+                {
+                    objUser.PASSWORD = modelo.PASS_USER;
+                }
+                objUser.EMAIL = modelo.MAIL_USER;
+                objUser.ROL = modelo.COD_ROL;
+                data.Entry(objUser).State = System.Data.Entity.EntityState.Modified;
+                data.SaveChanges();
+                return Redirect(Url.Content("~/USUARIOS"));
+            }
+        }
+        [HttpPost]
+
+        public ActionResult Borrar(int id)
+        {
+            using (var data = new bdVuelosEntities1())
+            {
+                var objUser = data.USUARIOS.Find(id);
+                objUser.ESTADO = false;
+                data.Entry(objUser).State = System.Data.Entity.EntityState.Modified;
+                data.SaveChanges();
+            }
+            return Content("1");
         }
     }
 }
