@@ -1,14 +1,59 @@
 ﻿
 @{
     ViewBag.Title = "Dashboard";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout_Cliente.cshtml";
 }
 
 <h2>Reserva de Vuelos</h2>
-
+<hr />
 <div class="col-md-12">
-    <div class="form-group">
-        
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Origen</label>
+            <select class="form-control">
+                <selected>Escoja su Origen</selected>
+                <option>La Libertad, El Salvador</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Destino</label>
+            <select class="form-control">
+                <selected>Escoja su destino</selected>
+                <option>Peten, Guatemala</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Salida</label>
+            <input type="date" class="form-control" />
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Retorno</label>
+            <input type="date" class="form-control" />
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Asientos de Reserva</label>
+            <input type="number" class="form-control" />
+        </div>
     </div>
 </div>
+
+<!--
+    <div class="col-md-12">
+    <div class="col-md-3">
+        <div class="form-group">
+            <label>Asientos de Reserva</label>
+            <input type="number" class="form-control" />
+        </div>
+    </div>
+</div>
+-->
+
 
