@@ -23,6 +23,8 @@ namespace ReservaDeVuelos.Models
         public int USUARIO { get; set; }
     
         public virtual OPC_VUELOS OPC_VUELOS { get; set; }
+        public virtual REGION_AEROPUERTO REGION_AEROPUERTO { get; set; }
+        public virtual REGION_AEROPUERTO REGION_AEROPUERTO1 { get; set; }
         public virtual USUARIOS USUARIOS { get; set; }
     }
 }

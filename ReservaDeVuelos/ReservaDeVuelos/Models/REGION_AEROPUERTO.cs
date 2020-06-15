@@ -18,6 +18,10 @@ namespace ReservaDeVuelos.Models
         public REGION_AEROPUERTO()
         {
             this.AEROLINEA_AEROPUERTO = new HashSet<AEROLINEA_AEROPUERTO>();
+            this.PRECIOS_VUELOS = new HashSet<PRECIOS_VUELOS>();
+            this.PRECIOS_VUELOS1 = new HashSet<PRECIOS_VUELOS>();
+            this.RESERVAS_DESTINOS = new HashSet<RESERVAS_DESTINOS>();
+            this.RESERVAS_DESTINOS1 = new HashSet<RESERVAS_DESTINOS>();
         }
     
         public int COD_REG_AER { get; set; }
@@ -27,6 +31,14 @@ namespace ReservaDeVuelos.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AEROLINEA_AEROPUERTO> AEROLINEA_AEROPUERTO { get; set; }
         public virtual AEROPUERTOS AEROPUERTOS { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PRECIOS_VUELOS> PRECIOS_VUELOS { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PRECIOS_VUELOS> PRECIOS_VUELOS1 { get; set; }
         public virtual REGIONES REGIONES { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RESERVAS_DESTINOS> RESERVAS_DESTINOS { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RESERVAS_DESTINOS> RESERVAS_DESTINOS1 { get; set; }
     }
 }

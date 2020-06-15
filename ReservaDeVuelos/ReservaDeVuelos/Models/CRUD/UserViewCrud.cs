@@ -10,10 +10,11 @@ namespace ReservaDeVuelos.Models.CRUD
 {
     public class UserViewCrud
     {
-       
+        public int COD_USER { get; set; }
         [Required]
         [Display(Name ="Nombre Completo")]
         public string NOMB_USER { get; set; }
+        
         [Required]
         [Display(Name ="Usuario")]
         public string NOM_USU { get; set; }
@@ -46,19 +47,37 @@ namespace ReservaDeVuelos.Models.CRUD
         public string CONFIRM_PASS_USER { get; set; }
 
         [Required]
+        [Display(Name ="Estado")]
         public bool COD_ESTADO { get; set; }
 
         [Required]
+        [Display(Name ="Selecione el Rol")]
         public int COD_ROL { get; set; }
         public SelectList Roles { get; set; }
     }
 
     public class UserViewEditar
     {
+        public int COD_USER { get; set; }
         [Required]
-        public int? COD_USER { get; set; }
-        [Required]
+        [Display(Name = "Nombre Completo")]
         public string NOMB_USER { get; set; }
+
+        [Required]
+        [Display(Name = "Usuario")]
+        public string NOM_USU { get; set; }
+        [Required]
+        [Display(Name = "Apellidos")]
+        public string APELLIDOS { get; set; }
+        [Required]
+        [Display(Name = "Direccion")]
+        public string DIRECCION { get; set; }
+        [Required]
+        [Display(Name = "Edad")]
+        public int EDADES { get; set; }
+        [Required]
+        [Display(Name = "Genero")]
+        public string GENERO { get; set; }
         [Required]
         [EmailAddress]
         [StringLength(100, ErrorMessage = "No cumple el tamaño", MinimumLength = 1)]
@@ -76,10 +95,13 @@ namespace ReservaDeVuelos.Models.CRUD
         public string CONFIRM_PASS_USER { get; set; }
 
         [Required]
-        public int COD_ESTADO { get; set; }
-
+        [Display(Name = "Estado")]
+        public bool COD_ESTADO { get; set; }
+        
         [Required]
+        [Display(Name = "Selecione el Rol")]
         public int COD_ROL { get; set; }
+       
     }
 
 }

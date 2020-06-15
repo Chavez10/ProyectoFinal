@@ -1,17 +1,19 @@
-﻿@model ReservaDeVuelos.Models.CRUD.UserViewCrud
+﻿@model ReservaDeVuelos.Models.CRUD.UserViewEditar
+
 @{
-    ViewBag.Title = "Insert";
+    ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Insertar Usuario</h2>
+<h2>Editar Usuario</h2>
 
 <div class="col-md-12">
-    @using (Html.BeginForm("Insert", "Usuarios", FormMethod.Post, new { role = "form", @class = "" }))
+    @using (Html.BeginForm("Edit", "USUARIOS", FormMethod.Post, new { role = "form", @class = "" }))
     {
         @Html.AntiForgeryToken()
         @Html.ValidationMessage("error", new { @class = "text-danger" });
         <div class="col-md-6">
+            @Html.TextBoxFor(codUser => codUser.COD_USER, htmlAttributes:new { @type="hidden"})
             <br />
             @Html.LabelFor(nomUSER => nomUSER.NOMB_USER)
             <br />
@@ -50,7 +52,7 @@
             <br />
             @Html.LabelFor(passUSER => passUSER.PASS_USER)
             <br />
-            @Html.PasswordFor(passUSER => passUSER.PASS_USER, new { @class = "form-control" })
+            @Html.PasswordFor(passUSER => passUSER.PASS_USER, new {Value = Model.PASS_USER, @class = "form-control" })
             <br />
             @Html.LabelFor(passUSERep => passUSERep.CONFIRM_PASS_USER)
             <br />
@@ -58,21 +60,27 @@
             <br />
             @Html.LabelFor(rol => rol.COD_ROL)
             <br />
-            @Html.DropDownListFor(rolUser => rolUser.COD_ROL, Model.Roles, "Por favor elija un Rol", new { @class = "form-control" })
+            @Html.TextBoxFor(rolUser => rolUser.COD_ROL, new { @class = "form-control" })
+            
+           
             <br />
             @Html.LabelFor(codEstado => codEstado.COD_ESTADO)
             <br />
             @Html.CheckBoxFor(codEstado => codEstado.COD_ESTADO, new { @class = "for-control" })
         </div>
         <br />
-           
-            
-          <div style="text-align:center">
-                <input type="submit" class="btn btn-success" name="btnGuardar" value="Guardar" />
-            </div>
+
+
+        <div style="text-align:center">
+            <input type="submit" class="btn btn-success" name="btnGuardar" value="Guardar" />
+        </div>
 
     }
 </div>
+
+
+
+
 
 
 

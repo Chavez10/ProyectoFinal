@@ -203,97 +203,97 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AEROLINEAS.cs">
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AEROLINEA_AEROPUERTO.cs">
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AEROPUERTOS.cs">
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AVIONES.cs">
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CONTACTOS_DOCUMENTOS.cs">
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CRUD\UserViewCrud.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\ModelVuelos.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelVuelos.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ModelVuelos.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ModelVuelos.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelVuelos.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\MODULOS.cs">
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\OPC_VUELOS.cs">
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\OPERACIONES.cs">
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PAISES.cs">
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PAIS_AEROLINEA.cs">
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PRECIOS_VUELOS.cs">
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PROC_PAGOS_VUELOS.cs">
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\REGIONES.cs">
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\REGION_AEROPUERTO.cs">
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\RegistroUsuarioModel\RegistroUsuarios.cs" />
     <Compile Include="Models\RESERVAS_ASIENTOS.cs">
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\RESERVAS_DESTINOS.cs">
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\RESERVAS_VUELOS.cs">
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ROLES.cs">
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ROL_OPERA.cs">
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TIPOS_PAGOS.cs">
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TIPO_CONTACTOS.cs">
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TIPO_DOCUMENTOS.cs">
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TIPO_VUELOS.cs">
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\USUARIOS.cs">
-      <DependentUpon>ModelVuelos.tt</DependentUpon>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\VistaUsuariosModel\InfoUser.cs" />
+    <Compile Include="Models\Vuelos_Final.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vuelos_Final.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Vuelos_Final.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vuelos_Final.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Vuelos_Final.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vuelos_Final.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -359,15 +359,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\ModelVuelos.Context.tt">
+    <Content Include="Models\Vuelos_Final.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelVuelos.edmx</DependentUpon>
-      <LastGenOutput>ModelVuelos.Context.cs</LastGenOutput>
+      <DependentUpon>Vuelos_Final.edmx</DependentUpon>
+      <LastGenOutput>Vuelos_Final.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\ModelVuelos.tt">
+    <Content Include="Models\Vuelos_Final.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelVuelos.edmx</DependentUpon>
-      <LastGenOutput>ModelVuelos.cs</LastGenOutput>
+      <DependentUpon>Vuelos_Final.edmx</DependentUpon>
+      <LastGenOutput>Vuelos_Final.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -414,12 +414,12 @@
     <Content Include="assets1\scss\_type.scss" />
     <Content Include="assets1\scss\_utilities.scss" />
     <Content Include="assets1\scss\_variables.scss" />
-    <EntityDeploy Include="Models\ModelVuelos.edmx">
+    <EntityDeploy Include="Models\Vuelos_Final.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelVuelos.Designer.cs</LastGenOutput>
+      <LastGenOutput>Vuelos_Final.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\ModelVuelos.edmx.diagram">
-      <DependentUpon>ModelVuelos.edmx</DependentUpon>
+    <Content Include="Models\Vuelos_Final.edmx.diagram">
+      <DependentUpon>Vuelos_Final.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -567,6 +567,7 @@
     <Content Include="Views\PRECIOS_VUELOS\Index.cshtml" />
     <Content Include="Views\Registros\Registro.cshtml" />
     <Content Include="Views\Usuarios\Insert.cshtml" />
+    <Content Include="Views\Usuarios\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

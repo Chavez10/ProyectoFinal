@@ -27,6 +27,8 @@ namespace ReservaDeVuelos.Models
         public decimal TOTAL { get; set; }
     
         public virtual AEROLINEAS AEROLINEAS { get; set; }
+        public virtual REGION_AEROPUERTO REGION_AEROPUERTO { get; set; }
+        public virtual REGION_AEROPUERTO REGION_AEROPUERTO1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PROC_PAGOS_VUELOS> PROC_PAGOS_VUELOS { get; set; }
     }

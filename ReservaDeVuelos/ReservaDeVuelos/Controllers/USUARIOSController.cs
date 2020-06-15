@@ -15,7 +15,7 @@ namespace ReservaDeVuelos.Controllers
         public ActionResult Index()
         {
             List<InfoUser> lista = null;
-            using(bdVuelosEntities data = new bdVuelosEntities())
+            using (bdVuelosEntities1 data = new bdVuelosEntities1())
             {
                 lista = (from info in data.USUARIOS
                          join rol in data.ROLES on info.ROL equals rol.COD_ROL
@@ -36,7 +36,7 @@ namespace ReservaDeVuelos.Controllers
         [HttpGet]
         public ActionResult Insert()
         {
-            var data = new bdVuelosEntities();
+            var data = new bdVuelosEntities1();
             var model = new UserViewCrud();
             model.Roles = new SelectList(data.ROLES, "COD_ROL", "ROL", 1);
             return View(model);
@@ -49,22 +49,94 @@ namespace ReservaDeVuelos.Controllers
                 return View(modelo);
             }
 
-            using (var data = new bdVuelosEntities())
+            using (var data = new bdVuelosEntities1())
             {
                 USUARIOS objUser = new USUARIOS();
                 objUser.ESTADO = modelo.COD_ESTADO;
                 objUser.EMAIL = modelo.MAIL_USER;
                 objUser.APELLIDOS = modelo.APELLIDOS;
+                objUser.DIRECCION = modelo.DIRECCION;
                 objUser.EDAD = modelo.EDADES;
-                
+                objUser.GENERO = modelo.GENERO;
                 objUser.NOMBRES = modelo.NOMB_USER;
+                objUser.USUARIO = modelo.NOM_USU;
                 objUser.ROL = modelo.COD_ROL;
-               
+                objUser.FECHA_CREACION = Convert.ToDateTime(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
+                objUser.COD_USUARIO = modelo.COD_USER;
                 objUser.PASSWORD = modelo.PASS_USER;
                 data.USUARIOS.Add(objUser);
                 data.SaveChanges();
             }
             return Redirect(Url.Content("~/USUARIOS"));
+        }
+        public ActionResult Edit(int id)
+        {
+
+            UserViewEditar modelo = new UserViewEditar();
+
+          
+            using (var data = new bdVuelosEntities1())
+            {
+              var actUser = data.USUARIOS.Find(id);
+               modelo.COD_ESTADO =  actUser.ESTADO;                     
+               modelo.MAIL_USER  =  actUser.EMAIL;                      
+               modelo.APELLIDOS  =  actUser.APELLIDOS;                  
+               modelo.DIRECCION  =  actUser.DIRECCION;                  
+               modelo.EDADES     =  actUser.EDAD;                       
+               modelo.GENERO     =  actUser.GENERO;                     
+               modelo.NOMB_USER  =  actUser.NOMBRES;                    
+               modelo.NOM_USU    =  actUser.USUARIO;
+               
+               modelo.COD_USER   = actUser.COD_USUARIO;
+               modelo.PASS_USER  = actUser.PASSWORD;
+               modelo.COD_ROL = actUser.ROL;
+
+            }
+          
+            return View(modelo);
+        }
+        [HttpPost]
+        public ActionResult Edit(UserViewEditar modelo)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(modelo);
+            }
+            using (var data = new bdVuelosEntities1())
+            {
+                var objUser = data.USUARIOS.Find(modelo.COD_USER);
+                objUser.EMAIL = modelo.MAIL_USER;
+                objUser.USUARIO = modelo.NOM_USU;
+                if(modelo.PASS_USER !=null && modelo.PASS_USER.Trim() != "")
+                {
+                    objUser.PASSWORD = modelo.PASS_USER;
+                }
+                objUser.ROL = modelo.COD_ROL;
+                objUser.FECHA_CREACION= Convert.ToDateTime(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
+                objUser.NOMBRES = modelo.NOMB_USER;
+                objUser.APELLIDOS = modelo.APELLIDOS;
+                objUser.DIRECCION = modelo.DIRECCION;
+                objUser.EDAD = modelo.EDADES;
+                objUser.ESTADO = modelo.COD_ESTADO;
+                objUser.GENERO = modelo.GENERO;
+                data.Entry(objUser).State = System.Data.Entity.EntityState.Modified;
+                data.SaveChanges();
+
+                return Redirect(Url.Content("~/USUARIOS"));
+            }
+        }
+        [HttpPost]
+
+        public ActionResult Borrar(int id)
+        {
+            using (var data = new bdVuelosEntities1())
+            {
+                var objUser = data.USUARIOS.Find(id);
+                objUser.ESTADO = false;
+                data.Entry(objUser).State = System.Data.Entity.EntityState.Modified;
+                data.SaveChanges();
+            }
+            return Content("1");
         }
     }
 }

@@ -18,11 +18,11 @@
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>COD_USER</th>
-                    <th>NOM_USER</th>
-                    <th>MAIL_USER</th>
-                    <th>COD_ROL</th>
-                    <th>COD_ESTADO</th>
+                    <th>Codigo de Usuario</th>
+                    <th>Nombre</th>
+                    <th>Correo Electronico</th>
+                    <th>Rol</th>
+                    <th>Estado</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -35,6 +35,10 @@
                         <td>@valores.MAIL_USER</td>
                         <td>@valores.COD_ROL</td>
                         <td>@valores.COD_ESTADO</td>
+                        <td>
+                            <input type="button" onclick="jsBorrar(@valores.COD_USER)" name="Eliminar" value="Eliminar" class="btn btn-danger" />
+                            <input type="button" onclick="document.location.href='@Url.Content("~/Usuarios/Edit/"+@valores.COD_USER)'" name="Editar" value="Editar" class="btn btn-outline-success" />
+                        </td>
                     </tr>
                     
                 </tbody>
@@ -45,4 +49,21 @@
     </div>
 
 </div>
+<script>
+    function jsBorrar(codUser) {
+        if(confirm("Esta seguro que quiere borrar")){
+
+
+            url="@Url.Content("~/USUARIOS/Borrar/")"+codUser
+            $.post(url, function(info){
+                if(info=="1"){
+                    document.location.href="@Url.Content("~/Usuarios/")"
+                }
+                else{
+                    alert("Ocurrio un error al intentar borrar:(")
+                }
+            })
+        }
+    }
+</script>
 

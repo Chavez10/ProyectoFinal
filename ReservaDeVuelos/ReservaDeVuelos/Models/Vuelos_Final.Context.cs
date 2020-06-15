@@ -13,10 +13,10 @@ namespace ReservaDeVuelos.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class bdVuelosEntities : DbContext
+    public partial class bdVuelosEntities1 : DbContext
     {
-        public bdVuelosEntities()
-            : base("name=bdVuelosEntities")
+        public bdVuelosEntities1()
+            : base("name=bdVuelosEntities1")
         {
         }
     
