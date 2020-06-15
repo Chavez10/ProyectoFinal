@@ -171,6 +171,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccesoController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ActionResults.cs" />
     <Compile Include="Controllers\AEROLINEASController.cs" />
     <Compile Include="Controllers\AEROLINEA_AEROPUERTOController.cs" />
     <Compile Include="Controllers\AEROPUERTOS1Controller.cs" />

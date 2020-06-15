@@ -97,11 +97,11 @@ namespace ReservaDeVuelos.Models.CRUD
         [Required]
         [Display(Name = "Estado")]
         public bool COD_ESTADO { get; set; }
-
+        
         [Required]
         [Display(Name = "Selecione el Rol")]
         public int COD_ROL { get; set; }
-        public SelectList Roles { get; set; }
+       
     }
 
 }
