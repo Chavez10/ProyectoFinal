@@ -8,6 +8,12 @@
 <h2>Listado de los Usuarios</h2>
 <hr />
 <div class="row">
+    <div class="col-md-12">
+        <input type="button" class="btn btn-primary" onclick="document.location.href='@Url.Content("~/Usuarios/Insert")'" value="Nuevo Usuario" />
+    </div>
+    <hr />
+</div>
+<div class="row">
     <div class="col-lg-12">
         <table class="table table-bordered">
             <thead>
@@ -30,6 +36,7 @@
                         <td>@valores.COD_ROL</td>
                         <td>@valores.COD_ESTADO</td>
                     </tr>
+                    
                 </tbody>
                 
             }
