@@ -7,48 +7,49 @@
 <h2>Reserva de Vuelos</h2>
 <hr />
 <div class="col-md-12">
-    <div class="col-md-2">
-        <div class="form-group">
-            <label>Origen</label>
-            @Html.DropDownList("Origen", ViewBag.Origen as IEnumerable<SelectListItem>)
+    @using (Html.BeginForm("InsertarReserva", "Home", FormMethod.Post, new { @id="aero"}))
+    {
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Origen</label>
+                @Html.DropDownList("Origen", (SelectList)ViewBag.Origen, "<< Seleccione >>", new { @class = "form-control" })
+            </div>
         </div>
-    </div>
-    <div class="col-md-2">
-        <div class="form-group">
-            <label>Destino</label>
-            <select class="form-control">
-                <selected>Escoja su destino</selected>
-                <option>Peten, Guatemala</option>
-            </select>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Destino</label>
+                @Html.DropDownList("Destino", (SelectList)ViewBag.Destino, "<< Seleccione >>", new { @class = "form-control" })
+            </div>
         </div>
-    </div>
-    <div class="col-md-2">
-        <div class="form-group">
-            <label>Salida</label>
-            <input type="date" class="form-control" />
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Salida</label>
+                <input type="date" class="form-control" />
+            </div>
         </div>
-    </div>
-    <div class="col-md-2">
-        <div class="form-group">
-            <label>Retorno</label>
-            <input type="date" class="form-control" />
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Retorno</label>
+                <input type="date" class="form-control" />
+            </div>
         </div>
-    </div>
-    <div class="col-md-2">
-        <div class="form-group">
-            <label>Asientos de Reserva</label>
-            <input type="number" class="form-control" />
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Asientos de Reserva</label>
+                <input type="number" class="form-control" />
+            </div>
         </div>
-    </div>
-    <div class="col-md-2">
-        <div class="form-group">
-            <label>Su Aerolinea</label>
-            <select class="form-control">
-                <selected>Escoja su Aerolinea</selected>
-                <option>Avianca</option>
-            </select>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Su Aerolinea</label>
+                <select class="form-control">
+                    <selected>Escoja su Aerolinea</selected>
+                    <option>Avianca</option>
+                </select>
+            </div>
         </div>
-    </div>
+    }
+    
 </div>
 
 <!--
