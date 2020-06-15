@@ -15,7 +15,7 @@ namespace ReservaDeVuelos.Controllers
         public ActionResult Index()
         {
             List<InfoUser> lista = null;
-            using(bdVuelosEntities data = new bdVuelosEntities())
+            using(bdVuelosEntities1 data = new bdVuelosEntities1())
             {
                 lista = (from info in data.USUARIOS
                          join rol in data.ROLES on info.ROL equals rol.COD_ROL
@@ -36,7 +36,7 @@ namespace ReservaDeVuelos.Controllers
         [HttpGet]
         public ActionResult Insert()
         {
-            var data = new bdVuelosEntities();
+            var data = new bdVuelosEntities1();
             var model = new UserViewCrud();
             model.Roles = new SelectList(data.ROLES, "COD_ROL", "ROL", 1);
             return View(model);
@@ -49,7 +49,7 @@ namespace ReservaDeVuelos.Controllers
                 return View(modelo);
             }
 
-            using (var data = new bdVuelosEntities())
+            using (var data = new bdVuelosEntities1())
             {
                 USUARIOS objUser = new USUARIOS();
                 objUser.ESTADO = modelo.COD_ESTADO;

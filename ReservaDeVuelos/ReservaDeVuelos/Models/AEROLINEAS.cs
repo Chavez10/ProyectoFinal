@@ -17,7 +17,6 @@ namespace ReservaDeVuelos.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public AEROLINEAS()
         {
-            this.RESERVAS_ASIENTOS = new HashSet<RESERVAS_ASIENTOS>();
             this.PRECIOS_VUELOS = new HashSet<PRECIOS_VUELOS>();
             this.AVIONES = new HashSet<AVIONES>();
             this.PAIS_AEROLINEA = new HashSet<PAIS_AEROLINEA>();
@@ -26,8 +25,6 @@ namespace ReservaDeVuelos.Models
         public int COD_AEROLINEA { get; set; }
         public string NOM_AEROLINEA { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RESERVAS_ASIENTOS> RESERVAS_ASIENTOS { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PRECIOS_VUELOS> PRECIOS_VUELOS { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

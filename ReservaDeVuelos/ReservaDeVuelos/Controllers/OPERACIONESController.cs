@@ -12,7 +12,7 @@ namespace ReservaDeVuelos.Controllers
 {
     public class OPERACIONESController : Controller
     {
-        private bdVuelosEntities db = new bdVuelosEntities();
+        private bdVuelosEntities1 db = new bdVuelosEntities1();
 
         // GET: OPERACIONES
         public ActionResult Index()

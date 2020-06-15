@@ -23,11 +23,11 @@ namespace ReservaDeVuelos.Models
         public int COD_RESERVA_ASIENTO { get; set; }
         public int COD_TIP_VUELO { get; set; }
         public int ASIENTO { get; set; }
-        public int COD_AEROLINEA { get; set; }
+        public int AEROLINEA_AEROPUERTO { get; set; }
         public int COD_AVION { get; set; }
         public int COD_USUARIO { get; set; }
     
-        public virtual AEROLINEAS AEROLINEAS { get; set; }
+        public virtual AEROLINEA_AEROPUERTO AEROLINEA_AEROPUERTO1 { get; set; }
         public virtual AVIONES AVIONES { get; set; }
         public virtual USUARIOS USUARIOS { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
