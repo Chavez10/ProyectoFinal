@@ -1,4 +1,4 @@
-﻿
+﻿@model ReservaDeVuelos.Models.RegistroUsuarioModel.RegistroUsuarios
 @{
  Layout = null;
 }
@@ -15,13 +15,15 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
     @Scripts.Render("~/bundle/javascript")
     
-
+   
     <title>Registro</title>
 </head>
 
 <body id="completo">
     <header></header>
     <div class="login-box  Just-add-water animate__bounce ">
+        @using (Html.BeginForm("")) { }
+
         <form action="" autocomplete="on">
             <h1> Registrate</h1>
             <hr>
