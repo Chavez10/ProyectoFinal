@@ -1,0 +1,78 @@
+﻿@model ReservaDeVuelos.Models.CRUD.UserViewCrud
+@{
+    ViewBag.Title = "Insert";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="col-md-12">
+    @using (Html.BeginForm("Insert", "Usuarios", FormMethod.Post, new { role = "form", @class = "" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationMessage("error", new { @class = "text-danger" });
+        <div class="col-md-6">
+            <br />
+            @Html.LabelFor(nomUSER => nomUSER.NOMB_USER)
+            <br />
+            @Html.TextBoxFor(nomUSER => nomUSER.NOMB_USER, new { @class = "form-control" })
+            <br />
+            <br />
+            @Html.LabelFor(apeUSER => apeUSER.APELLIDOS)
+            <br />
+            @Html.TextBoxFor(apeUSER => apeUSER.APELLIDOS, new { @class = "form-control" })
+            <br />
+            <br />
+            @Html.LabelFor(mailUSER => mailUSER.MAIL_USER)
+            <br />
+            @Html.TextBoxFor(mailUSER => mailUSER.MAIL_USER, new { @class = "form-control" })
+            <br />
+            <br />
+            @Html.LabelFor(direcUSER => direcUSER.DIRECCION)
+            <br />
+            @Html.TextBoxFor(direcUSER => direcUSER.DIRECCION, new { @class = "form-control" })
+            <br />
+            <br />
+            @Html.LabelFor(edadUSER => edadUSER.EDAD)
+            <br />
+            @Html.TextBoxFor(edadUSER => edadUSER.EDAD, new { @class = "form-control" })
+            <br />
+            <br />
+            @Html.LabelFor(generoUSER => generoUSER.GENERO)
+            <br />
+            @Html.TextBoxFor(generoUSER => generoUSER.GENERO, new { @class = "form-control" })
+            <br />
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(nomUSER => nomUSER.NOM_USU)
+            <br />
+            @Html.TextBoxFor(nomUSER => nomUSER.NOM_USU, new { @class = "form-control" })
+            <br />
+            @Html.LabelFor(passUSER => passUSER.PASS_USER)
+            <br />
+            @Html.PasswordFor(passUSER => passUSER.PASS_USER, new { @class = "form-control" })
+            <br />
+            @Html.LabelFor(passUSERep => passUSERep.CONFIRM_PASS_USER)
+            <br />
+            @Html.PasswordFor(passUSERep => passUSERep.CONFIRM_PASS_USER, new { @class = "form-control" })
+            <br />
+            @Html.LabelFor(rol => rol.COD_ROL)
+            <br />
+            @Html.DropDownListFor(rolUser => rolUser.COD_ROL, Model.Roles, "Por favor elija un Rol", new { @class = "form-control" })
+            <br />
+            @Html.LabelFor(codEstado => codEstado.COD_ESTADO)
+            <br />
+            @Html.CheckBoxFor(codEstado => codEstado.COD_ESTADO, new { @class = "for-control" })
+        </div>
+        <br />
+           
+            
+          <div style="text-align:right">
+                <input type="submit" class="btn btn-success" name="btnGuardar" value="Guardar" />
+            </div>
+
+    }
+</div>
+
+
+
