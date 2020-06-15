@@ -38,8 +38,33 @@ namespace ReservaDeVuelos.Controllers
         {
             var data = new bdVuelosEntities();
             var model = new UserViewCrud();
-            model.COD_ROL = new SelectList(data.ROLES, "COD_ROL", "NOMBRE", 1);
+            model.Roles = new SelectList(data.ROLES, "COD_ROL", "ROL", 1);
             return View(model);
+        }
+        [HttpPost]
+        public ActionResult Insert(UserViewCrud modelo)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(modelo);
+            }
+
+            using (var data = new bdVuelosEntities())
+            {
+                USUARIOS objUser = new USUARIOS();
+                objUser.ESTADO = modelo.COD_ESTADO;
+                objUser.EMAIL = modelo.MAIL_USER;
+                objUser.APELLIDOS = modelo.APELLIDOS;
+                objUser.EDAD = modelo.EDADES;
+                
+                objUser.NOMBRES = modelo.NOMB_USER;
+                objUser.ROL = modelo.COD_ROL;
+               
+                objUser.PASSWORD = modelo.PASS_USER;
+                data.USUARIOS.Add(objUser);
+                data.SaveChanges();
+            }
+            return Redirect(Url.Content("~/USUARIOS"));
         }
     }
 }

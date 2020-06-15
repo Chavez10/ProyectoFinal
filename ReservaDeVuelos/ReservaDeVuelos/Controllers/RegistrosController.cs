@@ -14,5 +14,14 @@ namespace ReservaDeVuelos.Controllers
             
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Registro()
+        {
+            return View(); 
+           
+        }
+
+
     }
 }
