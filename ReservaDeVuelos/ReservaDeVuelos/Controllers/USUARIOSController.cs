@@ -74,7 +74,7 @@ namespace ReservaDeVuelos.Controllers
 
             UserViewEditar modelo = new UserViewEditar();
 
-            bdVuelosEntities1 dat = new bdVuelosEntities1();
+          
             using (var data = new bdVuelosEntities1())
             {
               var actUser = data.USUARIOS.Find(id);
@@ -86,12 +86,13 @@ namespace ReservaDeVuelos.Controllers
                modelo.GENERO     =  actUser.GENERO;                     
                modelo.NOMB_USER  =  actUser.NOMBRES;                    
                modelo.NOM_USU    =  actUser.USUARIO;
-               modelo.COD_ROL    = Convert.ToInt32(actUser.ROL);
+               
                modelo.COD_USER   = actUser.COD_USUARIO;
-               modelo.PASS_USER  = actUser.PASSWORD;                  
+               modelo.PASS_USER  = actUser.PASSWORD;
+               modelo.COD_ROL = actUser.ROL;
 
             }
-            modelo.Roles = new SelectList(dat.ROLES, "COD_ROL", "ROL", 1);
+          
             return View(modelo);
         }
         [HttpPost]
@@ -104,16 +105,23 @@ namespace ReservaDeVuelos.Controllers
             using (var data = new bdVuelosEntities1())
             {
                 var objUser = data.USUARIOS.Find(modelo.COD_USER);
-                objUser.ESTADO = modelo.COD_ESTADO;
-                objUser.NOMBRES = modelo.NOMB_USER;
-                if (modelo.PASS_USER != null && modelo.PASS_USER.Trim() != "")
+                objUser.EMAIL = modelo.MAIL_USER;
+                objUser.USUARIO = modelo.NOM_USU;
+                if(modelo.PASS_USER !=null && modelo.PASS_USER.Trim() != "")
                 {
                     objUser.PASSWORD = modelo.PASS_USER;
                 }
-                objUser.EMAIL = modelo.MAIL_USER;
                 objUser.ROL = modelo.COD_ROL;
+                objUser.FECHA_CREACION= Convert.ToDateTime(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
+                objUser.NOMBRES = modelo.NOMB_USER;
+                objUser.APELLIDOS = modelo.APELLIDOS;
+                objUser.DIRECCION = modelo.DIRECCION;
+                objUser.EDAD = modelo.EDADES;
+                objUser.ESTADO = modelo.COD_ESTADO;
+                objUser.GENERO = modelo.GENERO;
                 data.Entry(objUser).State = System.Data.Entity.EntityState.Modified;
                 data.SaveChanges();
+
                 return Redirect(Url.Content("~/USUARIOS"));
             }
         }
