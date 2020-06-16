@@ -42,14 +42,39 @@
         <div class="col-md-2">
             <div class="form-group">
                 <label>Su Aerolinea</label>
-                <select class="form-control">
-                    <selected>Escoja su Aerolinea</selected>
-                    <option>Avianca</option>
+                <select id="aerolineas" class="form-control">
                 </select>
             </div>
         </div>
     }
-    
+    <script language="JavaScript" type="text/javascript" src="~/Scripts/jquery-1.10.2.js">
+        $(document).ready(function () {
+            $("#aerolineas").prop("disabled", true);
+            $("#Origen").change(function () {
+                if ($("#Origen").val() != "") {
+                    var options = {};
+                    options.url = "@Url.Content("~/Home/TraerAerolineas")";
+                    options.type = "POST";
+                    options.data = JSON.stringify({ region: $("#Origen").val() });
+                    options.dataType = "json";
+                    options.contentType = "application/json";
+                    options.success = function (aerolineas) {
+                        $("#aerolineas").empty();
+                        for (var i = 0; i < aerolineas.length; i++) {
+                            $("#aerolineas").append("<option>" + aerolineas[i] + "</option>");
+                        }
+                        $("#aerolineas").prop("disabled", false);
+                    };
+                    options.error = function () { alert("No se pudo obtener una aerolinea"); };
+                    $.ajax(options);
+                }
+                else {
+                    $("#aerolineas").empty();
+                    $("#aerolineas").prop("disabled", true);
+                }
+            });
+        });
+    </script>
 </div>
 
 <!--

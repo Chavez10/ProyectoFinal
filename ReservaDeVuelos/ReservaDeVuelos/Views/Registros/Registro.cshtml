@@ -22,74 +22,56 @@
 <body id="completo">
     <header></header>
     <div class="login-box  Just-add-water animate__bounce ">
-        @using (Html.BeginForm("")) { }
+        @using (Html.BeginForm("Registro", "Registros", FormMethod.Post)) {
 
-        <form action="" autocomplete="on">
-            <h1> Registrate</h1>
+            @Html.AntiForgeryToken()
+            @Html.ValidationMessage("error", new { @class = "text-danger" })
+                <h1> Registrate</h1>
             <hr>
             <div class="input1">
-                <label for="usernamesignup" class="animate__animated animate__fadeInBottomRight">Nombres</label>&nbsp; &nbsp;
-                <input id="usernamesignup" class="animate__animated animate__fadeInBottomLeft" name="NOMBRES" required="required" type="text" placeholder="Nombre" />
+            @Html.LabelFor(nombre => nombre.NOMBRES_USER, new { @class = "animate__animated animate__fadeInBottomRight" })
+                @Html.TextBoxFor(nombre => nombre.NOMBRES_USER, new { @class = "animate__animated animate__fadeInBottomLeft" })
+
             </div>
             <br>
             <div class="input2">
-                <label for="emailsignup" class="animate__animated animate__fadeInBottomRight">Apellidos</label>
-
-                <input id="APELLIDO" class="animate__animated animate__fadeInBottomLeft" name="APELLIDOS" required="required" type="text" placeholder="Apellido" />
-
+            @Html.LabelFor(apellidos => apellidos.APELLIDOS_USER, new { @class = "animate__animated animate__fadeInBottomRight" }) 
+                @Html.TextBoxFor(apellidos => apellidos.APELLIDOS_USER, new { @class = "animate__animated animate__fadeInBottomLeft" })
             </div>
-
             <div class="input3">
-
-                <label for="residencia" class="animate__animated animate__fadeInBottomRigh">Residencia</label>
-                <input id="residencia" class="animate__animated animate__fadeInBottomLeft" name="Residencia" required="required" type="text" placeholder="Residencia" />
+                 @Html.LabelFor(direccion => direccion.DIRRECION, new { @class = "animate__animated animate__fadeInBottomRigh" })
+                @Html.TextBoxFor(direccion => direccion.DIRRECION, new { @class = "animate__animated animate__fadeInBottomLeft" })
             </div>
             <hr>
-
-            <div class="input4">
-                <label for="residencia" class="class=" animate__animated animate__fadeInBottomLeft"">Edad</label>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-
-                <input id="residencia" class="animate__animated animate__fadeInBottomLeft" name="Residencia" required="required" type="number" placeholder="Edad" />
-            </div>
+             <div class="input4">
+                 @Html.LabelFor(edad => edad.EDAD, new { @class = "animate__animated animate__fadeInBottomLeft" })
+                 @Html.TextBoxFor(edad => edad.EDAD, new { @class = "animate__animated animate__fadeInBottomLeft" })
+             </div>
+             <br>
             <br>
+             <div class="input5">
+                 @Html.LabelFor(genero => genero.GENERO, new { @class = "animate__animated animate__fadeInBottomLeft" })
+                 @Html.TextBoxFor(genero => genero.GENERO, new { @class = "animate__animated animate__fadeInBottomLeft" })
+             </div>
+             <br>
             <br>
-
-
-            <div class="input5">
-
-                <select name="GENERO">
-
-                    <option>Genero</option>
-                    <option>Masculino</option>
-
-                    <option>Femenino</option>
-
-                </select>
-                </label>
-            </div>
-            <br><br><br>
-            <hr>
             <div class="input6">
-                <label for="Usuario" class="usuario">Usuario</label>&nbsp; &nbsp;
-                <input id="USUARIO" class="animate__animated animate__fadeInBottomLeft" name="USUARIO" required="required" type="text" placeholder="Usuario" />
-            </div>
-            <br>
+                 @Html.LabelFor(usuario => usuario.USER, new { @class = "animate__animated animate__fadeInBottomLeft" })&nbsp; &nbsp;
+                 @Html.TextBoxFor(usuario => usuario.USER, new { @class = "animate__animated animate__fadeInBottomLeft" })
+               </div>
+               <br>
             <div class="input7">
-                <label for="PASS" class="APLLIDO"> Contraseña</label>&nbsp; &nbsp;
-                <input id="PASSWORD" class="animate__animated animate__fadeInBottomLeft" name="PASSWORD" required="required" type="password" placeholder="Contraseña" />
-                <!--<button class="btn btn-primary" type="button"  onclick="mostrarContrasena()">mostrar Pass</button>
-                -->
+                @Html.LabelFor(pass => pass.PASSWORD, new { @class = "animate__animated animate__fadeInBottomLeft" })&nbsp; &nbsp;
+                @Html.TextBoxFor(pass => pass.PASSWORD, new { @class = "animate__animated animate__fadeInBottomLeft" })
             </div>
             <br>
             <div class="input8">
-                <label for="Correo" class="correo">Correo</label>&nbsp; &nbsp; &nbsp;
-                <input id="CORREO" class="animate__animated animate__fadeInBottomLeft" name="CORREO" required="required" type="email" placeholder="Correo" < />
+                @Html.LabelFor(email => email.MAIL_USER, new { @class = "animate__animated animate__fadeInBottomLeft" })&nbsp; &nbsp; &nbsp;
+                @Html.TextBoxFor(email => email.MAIL_USER, new { @class = "animate__animated animate__fadeInBottomLeft" })
             </div>
             <div class="input9">
-                <label for="PASS" class="APLLIDO"> Confirmar</label>&nbsp; &nbsp;
-                <input id="PASSWORD" class="animate__animated animate__fadeInBottomLeft" name="PASSWORD" required="required" type="password" placeholder="Confirmar " />
-                <!--<button class="btn btn-primary" type="button"  onclick="mostrarContrasena()">mostrar Pass</button>
-                -->
+                @Html.LabelFor(pass => pass.PASSWORD, new { @class = "animate__animated animate__fadeInBottomLeft" })&nbsp; &nbsp;
+                @Html.TextBoxFor(pass => pass.PASSWORD, new { @class = "animate__animated animate__fadeInBottomLeft" })
             </div>
             <br>
             <hr>
@@ -99,15 +81,19 @@
 
 
                 <br>
-                <p>
-                    Ya eres mienbro registrate
-                    <br><a href="login.html" id="btn1" class="to_register"> Loguéate </a>
-                </p>
-                
-            </div>
+                </div>
+                }
 
-        </form>
-    </div>
+                    <br>
+                    <p>
+                        Ya eres mienbro registrate
+                        <br><a href="login.html" id="btn1" class="to_register"> Loguéate </a>
+                    </p>
+
+                </div>
+
+               
+        
 
 
 </body>
