@@ -132,18 +132,11 @@
           <Property Name="COD_AVION" Type="int" Nullable="false" />
           <Property Name="COD_USUARIO" Type="int" Nullable="false" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'bdVuelos.dbo.RESERVAS_DESTINOS' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="RESERVAS_DESTINOS">
           <Key>
             <PropertyRef Name="COD_RESERVA_DESTINO" />
-            <PropertyRef Name="COD_OPC_VUELO" />
-            <PropertyRef Name="SALIDA" />
-            <PropertyRef Name="ORIGEN" />
-            <PropertyRef Name="DESTINO" />
-            <PropertyRef Name="USUARIO" />
           </Key>
-          <Property Name="COD_RESERVA_DESTINO" Type="int" Nullable="false" />
+          <Property Name="COD_RESERVA_DESTINO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="COD_OPC_VUELO" Type="int" Nullable="false" />
           <Property Name="SALIDA" Type="date" Nullable="false" />
           <Property Name="RETORNO" Type="date" />
@@ -609,6 +602,7 @@ advertencia 6002: La tabla o vista 'bdVuelos.dbo.RESERVAS_DESTINOS' no tiene def
           <EntitySet Name="REGION_AEROPUERTO" EntityType="Self.REGION_AEROPUERTO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="REGIONES" EntityType="Self.REGIONES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RESERVAS_ASIENTOS" EntityType="Self.RESERVAS_ASIENTOS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RESERVAS_DESTINOS" EntityType="Self.RESERVAS_DESTINOS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RESERVAS_VUELOS" EntityType="Self.RESERVAS_VUELOS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ROL_OPERA" EntityType="Self.ROL_OPERA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ROLES" EntityType="Self.ROLES" Schema="dbo" store:Type="Tables" />
@@ -617,17 +611,6 @@ advertencia 6002: La tabla o vista 'bdVuelos.dbo.RESERVAS_DESTINOS' no tiene def
           <EntitySet Name="TIPO_VUELOS" EntityType="Self.TIPO_VUELOS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TIPOS_PAGOS" EntityType="Self.TIPOS_PAGOS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="RESERVAS_DESTINOS" EntityType="Self.RESERVAS_DESTINOS" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [RESERVAS_DESTINOS].[COD_RESERVA_DESTINO] AS [COD_RESERVA_DESTINO], 
-    [RESERVAS_DESTINOS].[COD_OPC_VUELO] AS [COD_OPC_VUELO], 
-    [RESERVAS_DESTINOS].[SALIDA] AS [SALIDA], 
-    [RESERVAS_DESTINOS].[RETORNO] AS [RETORNO], 
-    [RESERVAS_DESTINOS].[ORIGEN] AS [ORIGEN], 
-    [RESERVAS_DESTINOS].[DESTINO] AS [DESTINO], 
-    [RESERVAS_DESTINOS].[USUARIO] AS [USUARIO]
-    FROM [dbo].[RESERVAS_DESTINOS] AS [RESERVAS_DESTINOS]</DefiningQuery>
-          </EntitySet>
           <AssociationSet Name="FK__CONTACTOS__COD_U__403A8C7D" Association="Self.FK__CONTACTOS__COD_U__403A8C7D">
             <End Role="USUARIOS" EntitySet="USUARIOS" />
             <End Role="CONTACTOS_DOCUMENTOS" EntitySet="CONTACTOS_DOCUMENTOS" />
@@ -927,6 +910,22 @@ advertencia 6002: La tabla o vista 'bdVuelos.dbo.RESERVAS_DESTINOS' no tiene def
           <NavigationProperty Name="RESERVAS_VUELOS" Relationship="Self.fk_ra_rv" FromRole="RESERVAS_ASIENTOS" ToRole="RESERVAS_VUELOS" />
           <NavigationProperty Name="TIPO_VUELOS" Relationship="Self.fk_tpv_ra" FromRole="RESERVAS_ASIENTOS" ToRole="TIPO_VUELOS" />
         </EntityType>
+        <EntityType Name="RESERVAS_DESTINOS">
+          <Key>
+            <PropertyRef Name="COD_RESERVA_DESTINO" />
+          </Key>
+          <Property Name="COD_RESERVA_DESTINO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="COD_OPC_VUELO" Type="Int32" Nullable="false" />
+          <Property Name="SALIDA" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="RETORNO" Type="DateTime" Precision="0" />
+          <Property Name="ORIGEN" Type="Int32" Nullable="false" />
+          <Property Name="DESTINO" Type="Int32" Nullable="false" />
+          <Property Name="USUARIO" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="OPC_VUELOS" Relationship="Self.fk_opc_rd" FromRole="RESERVAS_DESTINOS" ToRole="OPC_VUELOS" />
+          <NavigationProperty Name="REGION_AEROPUERTO" Relationship="Self.FK_RESERVAS_DESTINOS_REGION_AEROPUERTO" FromRole="RESERVAS_DESTINOS" ToRole="REGION_AEROPUERTO" />
+          <NavigationProperty Name="REGION_AEROPUERTO1" Relationship="Self.FK_RESERVAS_DESTINOS_REGION_AEROPUERTO1" FromRole="RESERVAS_DESTINOS" ToRole="REGION_AEROPUERTO" />
+          <NavigationProperty Name="USUARIOS" Relationship="Self.FK__RESERVAS___USUAR__5070F446" FromRole="RESERVAS_DESTINOS" ToRole="USUARIOS" />
+        </EntityType>
         <EntityType Name="RESERVAS_VUELOS">
           <Key>
             <PropertyRef Name="COD_RESERVA" />
@@ -1009,30 +1008,9 @@ advertencia 6002: La tabla o vista 'bdVuelos.dbo.RESERVAS_DESTINOS' no tiene def
           <Property Name="GENERO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
           <NavigationProperty Name="CONTACTOS_DOCUMENTOS" Relationship="Self.FK__CONTACTOS__COD_U__403A8C7D" FromRole="USUARIOS" ToRole="CONTACTOS_DOCUMENTOS" />
           <NavigationProperty Name="RESERVAS_ASIENTOS" Relationship="Self.FK__RESERVAS___COD_U__4CA06362" FromRole="USUARIOS" ToRole="RESERVAS_ASIENTOS" />
+          <NavigationProperty Name="RESERVAS_DESTINOS" Relationship="Self.FK__RESERVAS___USUAR__5070F446" FromRole="USUARIOS" ToRole="RESERVAS_DESTINOS" />
           <NavigationProperty Name="RESERVAS_VUELOS" Relationship="Self.FK__RESERVAS___COD_U__52593CB8" FromRole="USUARIOS" ToRole="RESERVAS_VUELOS" />
           <NavigationProperty Name="ROLES" Relationship="Self.fk_usuarios_roles" FromRole="USUARIOS" ToRole="ROLES" />
-          <NavigationProperty Name="RESERVAS_DESTINOS" Relationship="Self.FK__RESERVAS___USUAR__5070F446" FromRole="USUARIOS" ToRole="RESERVAS_DESTINOS" />
-        </EntityType>
-        <EntityType Name="RESERVAS_DESTINOS">
-          <Key>
-            <PropertyRef Name="COD_RESERVA_DESTINO" />
-            <PropertyRef Name="COD_OPC_VUELO" />
-            <PropertyRef Name="SALIDA" />
-            <PropertyRef Name="ORIGEN" />
-            <PropertyRef Name="DESTINO" />
-            <PropertyRef Name="USUARIO" />
-          </Key>
-          <Property Name="COD_RESERVA_DESTINO" Type="Int32" Nullable="false" />
-          <Property Name="COD_OPC_VUELO" Type="Int32" Nullable="false" />
-          <Property Name="SALIDA" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="RETORNO" Type="DateTime" Precision="0" />
-          <Property Name="ORIGEN" Type="Int32" Nullable="false" />
-          <Property Name="DESTINO" Type="Int32" Nullable="false" />
-          <Property Name="USUARIO" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="OPC_VUELOS" Relationship="Self.fk_opc_rd" FromRole="RESERVAS_DESTINOS" ToRole="OPC_VUELOS" />
-          <NavigationProperty Name="REGION_AEROPUERTO" Relationship="Self.FK_RESERVAS_DESTINOS_REGION_AEROPUERTO" FromRole="RESERVAS_DESTINOS" ToRole="REGION_AEROPUERTO" />
-          <NavigationProperty Name="REGION_AEROPUERTO1" Relationship="Self.FK_RESERVAS_DESTINOS_REGION_AEROPUERTO1" FromRole="RESERVAS_DESTINOS" ToRole="REGION_AEROPUERTO" />
-          <NavigationProperty Name="USUARIOS" Relationship="Self.FK__RESERVAS___USUAR__5070F446" FromRole="RESERVAS_DESTINOS" ToRole="USUARIOS" />
         </EntityType>
         <Association Name="FK_AEROLINEA_AEROPUERTO_PAIS_AEROLINEA">
           <End Role="PAIS_AEROLINEA" Type="Self.PAIS_AEROLINEA" Multiplicity="0..1" />
@@ -1358,6 +1336,18 @@ advertencia 6002: La tabla o vista 'bdVuelos.dbo.RESERVAS_DESTINOS' no tiene def
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__RESERVAS___USUAR__5070F446">
+          <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="1" />
+          <End Role="RESERVAS_DESTINOS" Type="Self.RESERVAS_DESTINOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIOS">
+              <PropertyRef Name="COD_USUARIO" />
+            </Principal>
+            <Dependent Role="RESERVAS_DESTINOS">
+              <PropertyRef Name="USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__RESERVAS___COD_U__52593CB8">
           <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="1" />
           <End Role="RESERVAS_VUELOS" Type="Self.RESERVAS_VUELOS" Multiplicity="*" />
@@ -1394,18 +1384,6 @@ advertencia 6002: La tabla o vista 'bdVuelos.dbo.RESERVAS_DESTINOS' no tiene def
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__RESERVAS___USUAR__5070F446">
-          <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="1" />
-          <End Role="RESERVAS_DESTINOS" Type="Self.RESERVAS_DESTINOS" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="USUARIOS">
-              <PropertyRef Name="COD_USUARIO" />
-            </Principal>
-            <Dependent Role="RESERVAS_DESTINOS">
-              <PropertyRef Name="USUARIO" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="bdVuelosEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AEROLINEA_AEROPUERTO" EntityType="Self.AEROLINEA_AEROPUERTO" />
           <EntitySet Name="AEROLINEAS" EntityType="Self.AEROLINEAS" />
@@ -1422,6 +1400,7 @@ advertencia 6002: La tabla o vista 'bdVuelos.dbo.RESERVAS_DESTINOS' no tiene def
           <EntitySet Name="REGION_AEROPUERTO" EntityType="Self.REGION_AEROPUERTO" />
           <EntitySet Name="REGIONES" EntityType="Self.REGIONES" />
           <EntitySet Name="RESERVAS_ASIENTOS" EntityType="Self.RESERVAS_ASIENTOS" />
+          <EntitySet Name="RESERVAS_DESTINOS" EntityType="Self.RESERVAS_DESTINOS" />
           <EntitySet Name="RESERVAS_VUELOS" EntityType="Self.RESERVAS_VUELOS" />
           <EntitySet Name="ROL_OPERA" EntityType="Self.ROL_OPERA" />
           <EntitySet Name="ROLES" EntityType="Self.ROLES" />
@@ -1430,7 +1409,6 @@ advertencia 6002: La tabla o vista 'bdVuelos.dbo.RESERVAS_DESTINOS' no tiene def
           <EntitySet Name="TIPO_VUELOS" EntityType="Self.TIPO_VUELOS" />
           <EntitySet Name="TIPOS_PAGOS" EntityType="Self.TIPOS_PAGOS" />
           <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" />
-          <EntitySet Name="RESERVAS_DESTINOS" EntityType="Self.RESERVAS_DESTINOS" />
           <AssociationSet Name="FK_AEROLINEA_AEROPUERTO_PAIS_AEROLINEA" Association="Self.FK_AEROLINEA_AEROPUERTO_PAIS_AEROLINEA">
             <End Role="PAIS_AEROLINEA" EntitySet="PAIS_AEROLINEA" />
             <End Role="AEROLINEA_AEROPUERTO" EntitySet="AEROLINEA_AEROPUERTO" />
@@ -1539,6 +1517,10 @@ advertencia 6002: La tabla o vista 'bdVuelos.dbo.RESERVAS_DESTINOS' no tiene def
             <End Role="TIPO_VUELOS" EntitySet="TIPO_VUELOS" />
             <End Role="RESERVAS_ASIENTOS" EntitySet="RESERVAS_ASIENTOS" />
           </AssociationSet>
+          <AssociationSet Name="FK__RESERVAS___USUAR__5070F446" Association="Self.FK__RESERVAS___USUAR__5070F446">
+            <End Role="USUARIOS" EntitySet="USUARIOS" />
+            <End Role="RESERVAS_DESTINOS" EntitySet="RESERVAS_DESTINOS" />
+          </AssociationSet>
           <AssociationSet Name="FK__RESERVAS___COD_U__52593CB8" Association="Self.FK__RESERVAS___COD_U__52593CB8">
             <End Role="USUARIOS" EntitySet="USUARIOS" />
             <End Role="RESERVAS_VUELOS" EntitySet="RESERVAS_VUELOS" />
@@ -1550,10 +1532,6 @@ advertencia 6002: La tabla o vista 'bdVuelos.dbo.RESERVAS_DESTINOS' no tiene def
           <AssociationSet Name="fk_usuarios_roles" Association="Self.fk_usuarios_roles">
             <End Role="ROLES" EntitySet="ROLES" />
             <End Role="USUARIOS" EntitySet="USUARIOS" />
-          </AssociationSet>
-          <AssociationSet Name="FK__RESERVAS___USUAR__5070F446" Association="Self.FK__RESERVAS___USUAR__5070F446">
-            <End Role="USUARIOS" EntitySet="USUARIOS" />
-            <End Role="RESERVAS_DESTINOS" EntitySet="RESERVAS_DESTINOS" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -1704,6 +1682,19 @@ advertencia 6002: La tabla o vista 'bdVuelos.dbo.RESERVAS_DESTINOS' no tiene def
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="RESERVAS_DESTINOS">
+            <EntityTypeMapping TypeName="bdVuelosModel.RESERVAS_DESTINOS">
+              <MappingFragment StoreEntitySet="RESERVAS_DESTINOS">
+                <ScalarProperty Name="COD_RESERVA_DESTINO" ColumnName="COD_RESERVA_DESTINO" />
+                <ScalarProperty Name="COD_OPC_VUELO" ColumnName="COD_OPC_VUELO" />
+                <ScalarProperty Name="SALIDA" ColumnName="SALIDA" />
+                <ScalarProperty Name="RETORNO" ColumnName="RETORNO" />
+                <ScalarProperty Name="ORIGEN" ColumnName="ORIGEN" />
+                <ScalarProperty Name="DESTINO" ColumnName="DESTINO" />
+                <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="RESERVAS_VUELOS">
             <EntityTypeMapping TypeName="bdVuelosModel.RESERVAS_VUELOS">
               <MappingFragment StoreEntitySet="RESERVAS_VUELOS">
@@ -1779,19 +1770,6 @@ advertencia 6002: La tabla o vista 'bdVuelos.dbo.RESERVAS_DESTINOS' no tiene def
                 <ScalarProperty Name="EDAD" ColumnName="EDAD" />
                 <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
                 <ScalarProperty Name="GENERO" ColumnName="GENERO" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="RESERVAS_DESTINOS">
-            <EntityTypeMapping TypeName="bdVuelosModel.RESERVAS_DESTINOS">
-              <MappingFragment StoreEntitySet="RESERVAS_DESTINOS">
-                <ScalarProperty Name="COD_RESERVA_DESTINO" ColumnName="COD_RESERVA_DESTINO" />
-                <ScalarProperty Name="COD_OPC_VUELO" ColumnName="COD_OPC_VUELO" />
-                <ScalarProperty Name="SALIDA" ColumnName="SALIDA" />
-                <ScalarProperty Name="RETORNO" ColumnName="RETORNO" />
-                <ScalarProperty Name="ORIGEN" ColumnName="ORIGEN" />
-                <ScalarProperty Name="DESTINO" ColumnName="DESTINO" />
-                <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

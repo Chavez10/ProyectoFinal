@@ -40,6 +40,7 @@ namespace ReservaDeVuelos.Models
         public virtual DbSet<REGION_AEROPUERTO> REGION_AEROPUERTO { get; set; }
         public virtual DbSet<REGIONES> REGIONES { get; set; }
         public virtual DbSet<RESERVAS_ASIENTOS> RESERVAS_ASIENTOS { get; set; }
+        public virtual DbSet<RESERVAS_DESTINOS> RESERVAS_DESTINOS { get; set; }
         public virtual DbSet<RESERVAS_VUELOS> RESERVAS_VUELOS { get; set; }
         public virtual DbSet<ROL_OPERA> ROL_OPERA { get; set; }
         public virtual DbSet<ROLES> ROLES { get; set; }
@@ -48,6 +49,5 @@ namespace ReservaDeVuelos.Models
         public virtual DbSet<TIPO_VUELOS> TIPO_VUELOS { get; set; }
         public virtual DbSet<TIPOS_PAGOS> TIPOS_PAGOS { get; set; }
         public virtual DbSet<USUARIOS> USUARIOS { get; set; }
-        public virtual DbSet<RESERVAS_DESTINOS> RESERVAS_DESTINOS { get; set; }
     }
 }

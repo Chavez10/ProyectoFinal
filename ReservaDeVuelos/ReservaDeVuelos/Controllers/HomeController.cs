@@ -111,8 +111,7 @@ namespace ReservaDeVuelos.Controllers
                 ra.COD_USUARIO = 14;
                 data.RESERVAS_ASIENTOS.Add(ra);
                 data.SaveChanges();
-
-                rd.COD_RESERVA_DESTINO = 1;
+                
                 rd.COD_OPC_VUELO = int.Parse(opcVuelo);
                 rd.SALIDA = Convert.ToDateTime(salida);
                 rd.RETORNO = Convert.ToDateTime(retorno);
@@ -121,7 +120,6 @@ namespace ReservaDeVuelos.Controllers
                 rd.USUARIO = 14;
                 data.RESERVAS_DESTINOS.Add(rd);
                 data.SaveChanges();
-
 
                 rv.COD_USUARIO = 14;
                 rv.COD_RESERVA_DESTINO = rd.COD_RESERVA_DESTINO;

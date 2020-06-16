@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="ffdf3dd935df488caa9c5afd8694309e" Name="Diagram1">
+      <Diagram DiagramId="342a8fcaef9941a48dc63c37e234d9be" Name="Diagram1">
         <EntityTypeShape EntityType="bdVuelosModel.AEROLINEA_AEROPUERTO" Width="1.5" PointX="7.5" PointY="7.25" IsExpanded="true" />
         <EntityTypeShape EntityType="bdVuelosModel.AEROLINEAS" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
         <EntityTypeShape EntityType="bdVuelosModel.AEROPUERTOS" Width="1.5" PointX="3" PointY="11.75" IsExpanded="true" />
@@ -20,6 +20,7 @@
         <EntityTypeShape EntityType="bdVuelosModel.REGION_AEROPUERTO" Width="1.5" PointX="5.25" PointY="8.125" IsExpanded="true" />
         <EntityTypeShape EntityType="bdVuelosModel.REGIONES" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
         <EntityTypeShape EntityType="bdVuelosModel.RESERVAS_ASIENTOS" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdVuelosModel.RESERVAS_DESTINOS" Width="1.5" PointX="10.5" PointY="8" IsExpanded="true" />
         <EntityTypeShape EntityType="bdVuelosModel.RESERVAS_VUELOS" Width="1.5" PointX="12" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="bdVuelosModel.ROL_OPERA" Width="1.5" PointX="7.5" PointY="22" IsExpanded="true" />
         <EntityTypeShape EntityType="bdVuelosModel.ROLES" Width="1.5" PointX="5.25" PointY="18.125" IsExpanded="true" />
@@ -28,7 +29,6 @@
         <EntityTypeShape EntityType="bdVuelosModel.TIPO_VUELOS" Width="1.5" PointX="7.5" PointY="14.5" IsExpanded="true" />
         <EntityTypeShape EntityType="bdVuelosModel.TIPOS_PAGOS" Width="1.5" PointX="12" PointY="12.625" IsExpanded="true" />
         <EntityTypeShape EntityType="bdVuelosModel.USUARIOS" Width="1.5" PointX="7.5" PointY="16.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="bdVuelosModel.RESERVAS_DESTINOS" Width="1.5" PointX="10.5" PointY="8" IsExpanded="true" />
         <AssociationConnector Association="bdVuelosModel.FK_AEROLINEA_AEROPUERTO_PAIS_AEROLINEA" ManuallyRouted="false" />
         <AssociationConnector Association="bdVuelosModel.FK_AEROLINEA_AEROPUERTO_REGION_AEROPUERTO" ManuallyRouted="false" />
         <AssociationConnector Association="bdVuelosModel.FK_RESERVAS_ASIENTOS_AEROLINEA_AEROPUERTO" ManuallyRouted="false" />
@@ -56,10 +56,10 @@
         <AssociationConnector Association="bdVuelosModel.FK__RESERVAS___COD_U__4CA06362" ManuallyRouted="false" />
         <AssociationConnector Association="bdVuelosModel.fk_ra_rv" ManuallyRouted="false" />
         <AssociationConnector Association="bdVuelosModel.fk_tpv_ra" ManuallyRouted="false" />
+        <AssociationConnector Association="bdVuelosModel.FK__RESERVAS___USUAR__5070F446" ManuallyRouted="false" />
         <AssociationConnector Association="bdVuelosModel.FK__RESERVAS___COD_U__52593CB8" ManuallyRouted="false" />
         <AssociationConnector Association="bdVuelosModel.fk_rol_opera" ManuallyRouted="false" />
         <AssociationConnector Association="bdVuelosModel.fk_usuarios_roles" ManuallyRouted="false" />
-        <AssociationConnector Association="bdVuelosModel.FK__RESERVAS___USUAR__5070F446" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
