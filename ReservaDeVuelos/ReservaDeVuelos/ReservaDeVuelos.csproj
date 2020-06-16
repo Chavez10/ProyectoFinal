@@ -351,6 +351,8 @@
     <Content Include="assets\img\interfaz.png" />
     <Content Include="assets\img\ojo.png" />
     <Content Include="assets\img\qwertyui.jpg" />
+    <Content Include="assets\img\usu.png" />
+    <Content Include="assets\img\vuelo.jpg" />
     <Content Include="assets\jquery\jquery.min.js" />
     <Content Include="assets\js\resgitro.js" />
     <Content Include="assets\js\script.js" />
