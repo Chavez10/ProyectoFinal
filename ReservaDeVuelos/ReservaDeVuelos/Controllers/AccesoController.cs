@@ -9,6 +9,7 @@ namespace ReservaDeVuelos.Controllers
 {
     public class AccesoController : Controller
     {
+        public int codusuario;
         // GET: Acceso
         public ActionResult Login()
         {
@@ -33,6 +34,7 @@ namespace ReservaDeVuelos.Controllers
                     else
                     {
                         Session["User"] = USUARIOS;
+                        codusuario = USUARIOS.COD_USUARIO;
                     }
                     if(USUARIOS.ROL == 1)
                     {

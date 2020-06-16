@@ -1,0 +1,12 @@
+﻿@model ReservaDeVuelos.Models.PAGOS.PagosViewInsert
+
+
+@{
+    ViewBag.Title = "InsertPagos";
+    Layout = "~/Views/Shared/_Layout_Cliente.cshtml";
+}
+
+<h2>InsertPagos</h2>
+@Html.DropDownList("TiposPagos",(SelectList)ViewBag.TiposPagos,"Seleciona el tipo de Pago", new {@class="form-control" })
+@Html.TextBoxFor( x=> x.COD_REV, new { @type="hidden", @class = "form-control" })
+
