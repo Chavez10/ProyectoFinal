@@ -10,11 +10,12 @@ namespace ReservaDeVuelos.Controllers
 {
     public class PagosController : Controller
     {
+       private AccesoController ct = new AccesoController();
         private bdVuelosEntities1 data = new bdVuelosEntities1();
         // GET: Pagos
         public ActionResult Index()
         {
-            AccesoController ct = new AccesoController();
+           
             /*
             List<PagosViewInsert> datos = null; 
            
@@ -64,5 +65,35 @@ namespace ReservaDeVuelos.Controllers
                 ViewBag.TiposPagos = new SelectList(tipo, "id", "nombre");
                 return View();
             }
+        [HttpPost]
+        public ActionResult insertarmonto(FormCollection form)
+        {
+            var tp = form["TiposPagos"];
+            
+            var tm = form["Totales"];
+            int total = int.Parse(tm);
+            using (var data = new bdVuelosEntities1()) 
+            {
+                PROC_PAGOS_VUELOS ppV = new PROC_PAGOS_VUELOS();
+                var cod = (from c in data.RESERVAS_VUELOS
+                           where c.COD_USUARIO == 14
+                           select c.COD_RESERVA
+                           ).FirstOrDefault();
+
+                var t = (from s in data.PRECIOS_VUELOS
+                         where s.COD_PRECIO_VUELO ==total
+                         select s.TOTAL
+                         ).FirstOrDefault();
+                ppV.COD_RESERVA = cod;
+                ppV.COD_TIPO_PAGO = int.Parse(tp);
+                ppV.COD_PRECIO_VUELO = int.Parse(tm);
+                ppV.TOTAL_MONTO = t;
+                data.PROC_PAGOS_VUELOS.Add(ppV);
+                data.SaveChanges();
+            }
+            return Redirect(Url.Content("~/Home/Dashboard"));
         }
     }
+    
+    
+}

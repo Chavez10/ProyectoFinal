@@ -1,0 +1,38 @@
+﻿@model List<ReservaDeVuelos.Models.DETALLE_VUELOS.detalle>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_Cliente.cshtml";
+}
+
+<h2>Index</h2>
+<div class="col-md-12">
+    <table>
+        <thead>
+            <tr>
+                <th>Numero de Reserva</th>
+                <th>Origen</th>
+                <th>Destino</th>
+                <th>Tipo de Pago</th>
+                <th>Tipo de Vuelo</th>
+                <th>Monto Total</th>
+                <th>Fecha de Reserva</th>
+                <th>Usuario</th>
+            </tr>
+        </thead>
+        @foreach(var item in Model)
+        {
+            <tbody>
+                <tr>
+                    <td>@item.COD_RS</td>
+                    <td>@item.ORIGEN</td>
+                    <td>@item.COD_RESR_DESTINOS</td>
+                    <td>@item.COD_TP</td>
+                    <td>@item.COD_TP_V</td>
+                    <td>@item.TM</td>
+                    <td>@item.FECHA</td>
+                    <td>@item.COD_USU</td>
+                </tr>
+            </tbody>
+        }
+    </table>
+</div>

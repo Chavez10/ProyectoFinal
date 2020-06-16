@@ -177,6 +177,7 @@
     <Compile Include="Controllers\AEROPUERTOS1Controller.cs" />
     <Compile Include="Controllers\AVIONESController.cs" />
     <Compile Include="Controllers\CerrarSesionController.cs" />
+    <Compile Include="Controllers\DetalleController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -219,6 +220,7 @@
       <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CRUD\UserViewCrud.cs" />
+    <Compile Include="Models\DETALLE_VUELOS\detalle.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MODULOS.cs">
@@ -572,6 +574,7 @@
     <Content Include="Views\PRECIOS_VUELOS\Edit.cshtml" />
     <Content Include="Views\PRECIOS_VUELOS\Index.cshtml" />
     <Content Include="Views\Pagos\Index.cshtml" />
+    <Content Include="Views\Detalle\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
