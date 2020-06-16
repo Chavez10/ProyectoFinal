@@ -229,6 +229,7 @@
     <Compile Include="Models\OPERACIONES.cs">
       <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\PAGOS\PagosViewInsert.cs" />
     <Compile Include="Models\PAISES.cs">
       <DependentUpon>Vuelos_Final.tt</DependentUpon>
     </Compile>
@@ -568,6 +569,7 @@
     <Content Include="Views\Registros\Registro.cshtml" />
     <Content Include="Views\Usuarios\Insert.cshtml" />
     <Content Include="Views\Usuarios\Edit.cshtml" />
+    <Content Include="Views\TIPOS_PAGOS\InsertPagos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
