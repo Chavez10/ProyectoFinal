@@ -8,5 +8,8 @@
 
 <h2>InsertPagos</h2>
 @Html.DropDownList("TiposPagos",(SelectList)ViewBag.TiposPagos,"Seleciona el tipo de Pago", new {@class="form-control" })
-@Html.TextBoxFor( x=> x.COD_REV, new { @type="hidden", @class = "form-control" })
+@Html.TextBoxFor( x=> x.COD_REV, new {  @class = "form-control" })
+@Html.TextBoxFor(y=> y.COD_PR, new {  @class="form-control"})
+@Html.TextBoxFor(p => p.TOTAL, new { @type = "disabled", @class = "form-control" })
+@Html.TextBoxFor(m => m.MONTO, new { @type = "disabled", @class = "form-control" })
 

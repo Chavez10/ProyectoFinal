@@ -129,51 +129,11 @@ namespace ReservaDeVuelos.Controllers
         [HttpGet]
         public ActionResult InsertPagos()
         {
-         AccesoController   ct = new AccesoController();
-            using (var data = new bdVuelosEntities1())
-            {
-                PagosViewInsert modelo = new PagosViewInsert();
-                var Reserva = (from ppv in data.PROC_PAGOS_VUELOS
-                               join rv in data.RESERVAS_VUELOS on ppv.COD_RESERVA equals rv.COD_RESERVA
-                               where rv.COD_USUARIO == int.Parse(ct.codusuario.ToString())
-                               select rv.COD_RESERVA
 
-                                );
-                var list = (from tp in data.TIPOS_PAGOS
-                            select new
-                            {
-                                id = tp.COD_TIPO_PAGO,
-                                pago = tp.TIPO_PAGO
-                            }
-
-                   );
-
-                modelo.COD_REV = Convert.ToInt32(Reserva);
-                
-                ViewBag.TiposPagos = new SelectList(list, "id", "pago");
-            }
-             return View();
+            return View();
         }
-        [HttpPost]
-        public ActionResult InsertPagos(PagosViewInsert modelo)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View(modelo);
-            }
 
-            using (var data = new bdVuelosEntities1())
-            {
-                PROC_PAGOS_VUELOS objpago = new PROC_PAGOS_VUELOS();
-                objpago.COD_PROC_PAGO_VUELO = modelo.COD_PROC;
-                objpago.COD_RESERVA = modelo.COD_REV;
-                objpago.COD_TIPO_PAGO = modelo.COD_TP;
-                objpago.COD_PRECIO_VUELO = modelo.COD_PR;
-                objpago.TOTAL_MONTO = modelo.MONTO;
-
-               
-            }
-            return Redirect(Url.Content("~/Home"));
-        }
     }
+
+    
 }

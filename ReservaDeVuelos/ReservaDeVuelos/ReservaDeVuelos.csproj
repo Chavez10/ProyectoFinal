@@ -183,6 +183,7 @@
     <Compile Include="Controllers\MODULOSController.cs" />
     <Compile Include="Controllers\OPC_VUELOSController.cs" />
     <Compile Include="Controllers\OPERACIONESController.cs" />
+    <Compile Include="Controllers\PagosController.cs" />
     <Compile Include="Controllers\PAISESController.cs" />
     <Compile Include="Controllers\PAIS_AEROLINEAController.cs" />
     <Compile Include="Controllers\PRECIOS_VUELOSController.cs" />
@@ -570,6 +571,7 @@
     <Content Include="Views\PRECIOS_VUELOS\Details.cshtml" />
     <Content Include="Views\PRECIOS_VUELOS\Edit.cshtml" />
     <Content Include="Views\PRECIOS_VUELOS\Index.cshtml" />
+    <Content Include="Views\Pagos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

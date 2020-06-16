@@ -1,0 +1,61 @@
+﻿
+@model ReservaDeVuelos.Models.PAGOS.PagosViewInsert
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_Cliente.cshtml";
+}
+
+<h2>InsertPagos</h2>
+
+
+
+<div class="col-md-12">
+    
+    @using (Html.BeginForm("insertarmonto", "Pagos", FormMethod.Post))
+    {
+        <div class="form-group">
+            <label>Elija su forma de pago</label>
+            @Html.DropDownList("TiposPagos", (SelectList)ViewBag.TiposPagos, "Seleciona el tipo de Pago", new { @class = "form-control" })
+        </div>
+        <div class="from-group">
+            <label>Numero de tarjeta</label>
+            <input type="text" class="form-control"/>
+        </div>
+        <div class="from-group">
+            <label>Titular de Tarjeta</label>
+            <input type="text" class="form-control" />
+        </div>
+        <div class="from-group">
+            <label>Codico de Tarjeta</label>
+            <input type="text" class="form-control" />
+        </div>
+        <div class="from-group">
+            <label>Monto</label>
+            @Html.DropDownList("totales", (SelectList)ViewBag.totales, "Monto a Abonar", new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-success" value="Pagar" />
+        </div>
+
+    }
+</div>
+
+
+
+
+
+
+
+@*
+    @Html.TextBoxFor(x => x.COD_REV, new { @class = "form-control" })
+    @Html.TextBoxFor(y => y.COD_PR, new { @class = "form-control" })
+    @Html.TextBoxFor(p => p.TOTAL, new { @type = "disabled", @class = "form-control" })
+    @Html.TextBoxFor(m => m.MONTO, new { @type = "disabled", @class = "form-control" })
+*@
+
+
+
+
+

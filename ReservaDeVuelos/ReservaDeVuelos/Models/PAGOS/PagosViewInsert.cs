@@ -17,7 +17,9 @@ namespace ReservaDeVuelos.Models.PAGOS
         [Required]
         [Display(Name = "Monto Total")]
         public Decimal MONTO { get; set; }
-        
+        public Decimal TOTAL { get; set; }
+        public string TIPO_P { get; set; }
+
 
     }
 }
