@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using ReservaDeVuelos.Models;
 using ReservaDeVuelos.Models.RegistroUsuarioModel;
+using ReservaDeVuelos.Models.CRUD;
 
 namespace ReservaDeVuelos.Controllers
 {
@@ -18,7 +19,7 @@ namespace ReservaDeVuelos.Controllers
         }
 
         [HttpPost]
-        public ActionResult Registro(RegistroUsuarios modelo)
+        public ActionResult Registro(UserViewCrud modelo)
         {
             if (!ModelState.IsValid)
             {
@@ -27,16 +28,17 @@ namespace ReservaDeVuelos.Controllers
             using (var data = new bdVuelosEntities1())
             {
                 USUARIOS objRes = new USUARIOS();
-                objRes.NOMBRES = modelo.NOMBRES_USER;
-                objRes.APELLIDOS = modelo.APELLIDOS_USER;
-                objRes.EDAD = modelo.EDAD;
-                objRes.DIRECCION = modelo.DIRRECION;
+                objRes.NOMBRES = modelo.NOMB_USER;
+                objRes.APELLIDOS = modelo.APELLIDOS;
+                objRes.EDAD = modelo.EDADES;
+                objRes.DIRECCION = modelo.DIRECCION;
                 objRes.EMAIL = modelo.MAIL_USER;
                 objRes.GENERO = modelo.GENERO;
                 objRes.FECHA_CREACION = Convert.ToDateTime(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
-                objRes.USUARIO = modelo.USER;
-                objRes.PASSWORD = modelo.PASSWORD;
-                objRes.ESTADO = true;
+                objRes.USUARIO = modelo.NOM_USU;
+                objRes.PASSWORD = modelo.PASS_USER;
+                objRes.ESTADO =modelo.COD_ESTADO;
+                objRes.ROL = 2;
                 data.USUARIOS.Add(objRes);
                 data.SaveChanges();
                

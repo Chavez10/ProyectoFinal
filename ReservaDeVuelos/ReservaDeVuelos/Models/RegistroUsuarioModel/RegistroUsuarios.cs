@@ -26,14 +26,14 @@ namespace ReservaDeVuelos.Models.RegistroUsuarioModel
         [DataType(DataType.Password)]
         [Display(Name ="Contraseña")]
         public string PASSWORD { get; set; }
+        [Display(Name ="Confirmar Contraseña")]
+        [DataType(DataType.Password)]
+        [System.ComponentModel.DataAnnotations.Compare("PASSWORD", ErrorMessage ="Las contraseñas no coniciden")]
+        public string CONFIR_PASS { get; set; }
         [Required]
         public int COD_ROL { get; set; }
-        [Required]
-        public SelectList ROLES { get; set; }
-        [Required]
-        [DataType(DataType.DateTime)]
-        [Display(Name = "Fecha de Usuario")]
-        public DateTime FECHA_USER { get; set; }
+       
+        
         [Required]
         [DataType(DataType.Text)]
         [Display(Name = "Nombres de Usuario")]
@@ -45,12 +45,12 @@ namespace ReservaDeVuelos.Models.RegistroUsuarioModel
         [Required]
         [DataType(DataType.Text)]
         [Display(Name = "Dirreccion")]
-        public string DIRRECION { get; set; }
+        public string DIRECCION { get; set; }
         [Required]
         [DataType(DataType.Text)]
         [Display(Name = "Edad ")]
         public int EDAD { get; set; }
-        [Required]
+        
         public bool ESTADO { get; set; }
         [Required]
         [DataType(DataType.Text)]

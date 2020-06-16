@@ -1,6 +1,6 @@
-﻿@model ReservaDeVuelos.Models.RegistroUsuarioModel.RegistroUsuarios
-@{
- Layout = null;
+﻿@model ReservaDeVuelos.Models.CRUD.UserViewCrud
+  @{
+    Layout = null;
 }
 
 <!DOCTYPE html>
@@ -13,90 +13,88 @@
     @Styles.Render("~/assets/css")
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundle/javascript")
-    
-   
+
+
     <title>Registro</title>
 </head>
 
 <body id="completo">
     <header></header>
-    <div class="login-box  Just-add-water animate__bounce ">
-        @using (Html.BeginForm("Registro", "Registros", FormMethod.Post)) {
+    <div class="col-md-12 ">
+        @using (Html.BeginForm("Registro", "Registros", FormMethod.Post))
+        {
 
             @Html.AntiForgeryToken()
             @Html.ValidationMessage("error", new { @class = "text-danger" })
-                <h1> Registrate</h1>
+            <h1> Registrate</h1>
             <hr>
-            <div class="input1">
-            @Html.LabelFor(nombre => nombre.NOMBRES_USER, new { @class = "animate__animated animate__fadeInBottomRight" })
-                @Html.TextBoxFor(nombre => nombre.NOMBRES_USER, new { @class = "animate__animated animate__fadeInBottomLeft" })
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(nombre => nombre.NOMB_USER)
 
-            </div>
-            <br>
-            <div class="input2">
-            @Html.LabelFor(apellidos => apellidos.APELLIDOS_USER, new { @class = "animate__animated animate__fadeInBottomRight" }) 
-                @Html.TextBoxFor(apellidos => apellidos.APELLIDOS_USER, new { @class = "animate__animated animate__fadeInBottomLeft" })
-            </div>
-            <div class="input3">
-                 @Html.LabelFor(direccion => direccion.DIRRECION, new { @class = "animate__animated animate__fadeInBottomRigh" })
-                @Html.TextBoxFor(direccion => direccion.DIRRECION, new { @class = "animate__animated animate__fadeInBottomLeft" })
-            </div>
-            <hr>
-             <div class="input4">
-                 @Html.LabelFor(edad => edad.EDAD, new { @class = "animate__animated animate__fadeInBottomLeft" })
-                 @Html.TextBoxFor(edad => edad.EDAD, new { @class = "animate__animated animate__fadeInBottomLeft" })
-             </div>
-             <br>
-            <br>
-             <div class="input5">
-                 @Html.LabelFor(genero => genero.GENERO, new { @class = "animate__animated animate__fadeInBottomLeft" })
-                 @Html.TextBoxFor(genero => genero.GENERO, new { @class = "animate__animated animate__fadeInBottomLeft" })
-             </div>
-             <br>
-            <br>
-            <div class="input6">
-                 @Html.LabelFor(usuario => usuario.USER, new { @class = "animate__animated animate__fadeInBottomLeft" })&nbsp; &nbsp;
-                 @Html.TextBoxFor(usuario => usuario.USER, new { @class = "animate__animated animate__fadeInBottomLeft" })
-               </div>
-               <br>
-            <div class="input7">
-                @Html.LabelFor(pass => pass.PASSWORD, new { @class = "animate__animated animate__fadeInBottomLeft" })&nbsp; &nbsp;
-                @Html.TextBoxFor(pass => pass.PASSWORD, new { @class = "animate__animated animate__fadeInBottomLeft" })
-            </div>
-            <br>
-            <div class="input8">
-                @Html.LabelFor(email => email.MAIL_USER, new { @class = "animate__animated animate__fadeInBottomLeft" })&nbsp; &nbsp; &nbsp;
-                @Html.TextBoxFor(email => email.MAIL_USER, new { @class = "animate__animated animate__fadeInBottomLeft" })
-            </div>
-            <div class="input9">
-                @Html.LabelFor(pass => pass.PASSWORD, new { @class = "animate__animated animate__fadeInBottomLeft" })&nbsp; &nbsp;
-                @Html.TextBoxFor(pass => pass.PASSWORD, new { @class = "animate__animated animate__fadeInBottomLeft" })
-            </div>
-            <br>
-            <hr>
-
-            <div class="center">
-                <input type="submit" value="Registro" />
-
-
-                <br>
+                    @Html.TextBoxFor(nombre => nombre.NOMB_USER, new { @class = "form-control" })
                 </div>
-                }
 
-                    <br>
-                    <p>
-                        Ya eres mienbro registrate
-                        <br><a href="login.html" id="btn1" class="to_register"> Loguéate </a>
-                    </p>
+                <div class="form-group">
+                    @Html.LabelFor(apellido => apellido.APELLIDOS)
+
+                    @Html.TextBoxFor(apellido => apellido.APELLIDOS, new { @class = "form-control" })
 
                 </div>
 
-               
-        
 
+                <div class="form-group">
+                    @Html.LabelFor(direccion => direccion.DIRECCION)
+                    @Html.TextBoxFor(direccion => direccion.DIRECCION, new { @class = "form-control" })
 
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(edad => edad.EDADES)
+                    @Html.TextBoxFor(edad => edad.EDADES, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(genero => genero.GENERO)
+                    @Html.TextBoxFor(genero => genero.GENERO, new { @class = "form-control" })
+                </div>
+
+            </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        @Html.LabelFor(usuario => usuario.NOM_USU)
+                        @Html.TextBoxFor(usuario => usuario.NOM_USU, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(email => email.MAIL_USER)
+                        @Html.TextBoxFor(email => email.MAIL_USER, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(pass => pass.PASS_USER)
+                        @Html.PasswordFor(pass => pass.PASS_USER, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(conpas => conpas.CONFIRM_PASS_USER)
+                        @Html.PasswordFor(conpas => conpas.CONFIRM_PASS_USER, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(codEstado => codEstado.COD_ESTADO)
+                        @Html.CheckBoxFor(codEstado => codEstado.COD_ESTADO, new { @class = "for-control" })
+                    </div>
+                   
+                    
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-success" value="Registro" />
+                </div>
+        }
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
 </body>
-
 </html>
 
