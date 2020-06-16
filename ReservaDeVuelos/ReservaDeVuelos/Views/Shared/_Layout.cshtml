@@ -54,7 +54,7 @@
                             @Html.ActionLink("Tipos de Pagos", "Index", "TIPOS_PAGOS")
                         </div>
                     </li>
-                    <li style="float:right">@Html.ActionLink("Cerrar Sesión", "CerrarSesion", "CerrarSesion")</li>
+                    @Html.Partial("_LoginPartial")
                 </ul>
             </div>
         </div>

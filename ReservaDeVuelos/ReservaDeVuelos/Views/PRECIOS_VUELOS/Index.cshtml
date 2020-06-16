@@ -13,16 +13,16 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.ORIGEN)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DESTINO)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.TOTAL)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.AEROLINEAS.NOM_AEROLINEA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REGION_AEROPUERTO.REGION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REGION_AEROPUERTO1.REGION)
         </th>
         <th></th>
     </tr>
@@ -30,16 +30,16 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.ORIGEN)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DESTINO)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.TOTAL)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.AEROLINEAS.NOM_AEROLINEA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REGION_AEROPUERTO.REGION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REGION_AEROPUERTO1.REGION)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.COD_PRECIO_VUELO }) |

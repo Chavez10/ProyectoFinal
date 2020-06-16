@@ -17,7 +17,7 @@ namespace ReservaDeVuelos.Controllers
         // GET: PRECIOS_VUELOS
         public ActionResult Index()
         {
-            var pRECIOS_VUELOS = db.PRECIOS_VUELOS.Include(p => p.AEROLINEAS);
+            var pRECIOS_VUELOS = db.PRECIOS_VUELOS.Include(p => p.AEROLINEAS).Include(p => p.REGION_AEROPUERTO).Include(p => p.REGION_AEROPUERTO1);
             return View(pRECIOS_VUELOS.ToList());
         }
 
@@ -40,6 +40,8 @@ namespace ReservaDeVuelos.Controllers
         public ActionResult Create()
         {
             ViewBag.COD_AEROLINEA = new SelectList(db.AEROLINEAS, "COD_AEROLINEA", "NOM_AEROLINEA");
+            ViewBag.ORIGEN = new SelectList(db.REGION_AEROPUERTO, "COD_REG_AER", "REGION");
+            ViewBag.DESTINO = new SelectList(db.REGION_AEROPUERTO, "COD_REG_AER", "REGION");
             return View();
         }
 
@@ -58,6 +60,8 @@ namespace ReservaDeVuelos.Controllers
             }
 
             ViewBag.COD_AEROLINEA = new SelectList(db.AEROLINEAS, "COD_AEROLINEA", "NOM_AEROLINEA", pRECIOS_VUELOS.COD_AEROLINEA);
+            ViewBag.ORIGEN = new SelectList(db.REGION_AEROPUERTO, "COD_REG_AER", "REGION", pRECIOS_VUELOS.ORIGEN);
+            ViewBag.DESTINO = new SelectList(db.REGION_AEROPUERTO, "COD_REG_AER", "REGION", pRECIOS_VUELOS.DESTINO);
             return View(pRECIOS_VUELOS);
         }
 
@@ -74,6 +78,8 @@ namespace ReservaDeVuelos.Controllers
                 return HttpNotFound();
             }
             ViewBag.COD_AEROLINEA = new SelectList(db.AEROLINEAS, "COD_AEROLINEA", "NOM_AEROLINEA", pRECIOS_VUELOS.COD_AEROLINEA);
+            ViewBag.ORIGEN = new SelectList(db.REGION_AEROPUERTO, "COD_REG_AER", "REGION", pRECIOS_VUELOS.ORIGEN);
+            ViewBag.DESTINO = new SelectList(db.REGION_AEROPUERTO, "COD_REG_AER", "REGION", pRECIOS_VUELOS.DESTINO);
             return View(pRECIOS_VUELOS);
         }
 
@@ -91,6 +97,8 @@ namespace ReservaDeVuelos.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.COD_AEROLINEA = new SelectList(db.AEROLINEAS, "COD_AEROLINEA", "NOM_AEROLINEA", pRECIOS_VUELOS.COD_AEROLINEA);
+            ViewBag.ORIGEN = new SelectList(db.REGION_AEROPUERTO, "COD_REG_AER", "REGION", pRECIOS_VUELOS.ORIGEN);
+            ViewBag.DESTINO = new SelectList(db.REGION_AEROPUERTO, "COD_REG_AER", "REGION", pRECIOS_VUELOS.DESTINO);
             return View(pRECIOS_VUELOS);
         }
 

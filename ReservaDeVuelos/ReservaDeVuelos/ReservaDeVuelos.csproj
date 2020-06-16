@@ -561,15 +561,15 @@
     <Content Include="Views\TIPO_VUELOS\Details.cshtml" />
     <Content Include="Views\TIPO_VUELOS\Edit.cshtml" />
     <Content Include="Views\TIPO_VUELOS\Index.cshtml" />
+    <Content Include="Views\Registros\Registro.cshtml" />
+    <Content Include="Views\Usuarios\Insert.cshtml" />
+    <Content Include="Views\Usuarios\Edit.cshtml" />
+    <Content Include="Views\TIPOS_PAGOS\InsertPagos.cshtml" />
     <Content Include="Views\PRECIOS_VUELOS\Create.cshtml" />
     <Content Include="Views\PRECIOS_VUELOS\Delete.cshtml" />
     <Content Include="Views\PRECIOS_VUELOS\Details.cshtml" />
     <Content Include="Views\PRECIOS_VUELOS\Edit.cshtml" />
     <Content Include="Views\PRECIOS_VUELOS\Index.cshtml" />
-    <Content Include="Views\Registros\Registro.cshtml" />
-    <Content Include="Views\Usuarios\Insert.cshtml" />
-    <Content Include="Views\Usuarios\Edit.cshtml" />
-    <Content Include="Views\TIPOS_PAGOS\InsertPagos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
