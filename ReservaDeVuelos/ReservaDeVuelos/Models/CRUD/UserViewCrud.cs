@@ -9,7 +9,7 @@ using System.Web.Mvc;
 namespace ReservaDeVuelos.Models.CRUD
 {
     public class UserViewCrud
-    {
+    {   
         public int COD_USER { get; set; }
         [Required]
         [Display(Name ="Nombre Completo")]

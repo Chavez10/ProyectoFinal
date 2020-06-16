@@ -36,27 +36,38 @@ namespace ReservaDeVuelos.Controllers
         [Autorizaciones (CodOperacion: 5)]
         public ActionResult Dashboard()
         {
+            int id;
+            var list = (from ra in data.REGION_AEROPUERTO
+                        join ar in data.AEROPUERTOS on ra.AEROPUERTO equals ar.COD_AERO
+                        join r in data.REGIONES on ra.REGION equals r.COD_REGION
+                        orderby ar.NOM_AERO ascending
+                        select new
+                        {
+                            id = ra.COD_REG_AER,
+                            regiones = ar.NOM_AERO + ", " + r.REGION,
+                            
+                        }
+
+                   
+                );
+            
+
             var aerolist = (from arP in data.AEROLINEA_AEROPUERTO
                             join ra in data.REGION_AEROPUERTO on arP.REGION_AEROPUERTO equals ra.COD_REG_AER
                             join psa in data.PAIS_AEROLINEA on arP.PAIS_AEROLINEA equals psa.COD_PAIS_AEROLINEA
                             join arL in data.AEROLINEAS on psa.AEROLINEA equals arL.COD_AEROLINEA
-                            //where arP.REGION_AEROPUERTO == 
-                            select arL.NOM_AEROLINEA
-                );
+                            
+                            select new
+                            {
+                                id = arP.COD_AL_AP,
+                                aerolinea = arL.NOM_AEROLINEA,
+                                id_r = ra.REGIONES
+                            }
+                ).Distinct();
 
-            var list = (from ra in data.REGION_AEROPUERTO
-                    join ar in data.AEROPUERTOS on ra.AEROPUERTO equals ar.COD_AERO
-                    join r in data.REGIONES on ra.REGION equals r.COD_REGION
-                    orderby ar.NOM_AERO ascending
-                    select new
-                    {
-                        id = ra.COD_REG_AER,
-                        regiones = ar.NOM_AERO + ", " + r.REGION
-                    }
-                );
-            
             ViewBag.Origen = new SelectList(list, "id", "regiones");
             ViewBag.Destino = new SelectList(list, "id", "regiones");
+            ViewBag.Aerolinea = new SelectList(aerolist, "id", "aerolinea");
             return View();
         }
 
